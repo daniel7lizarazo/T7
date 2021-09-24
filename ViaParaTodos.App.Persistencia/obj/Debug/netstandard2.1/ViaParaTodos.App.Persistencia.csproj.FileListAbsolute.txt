@@ -1,0 +1,12 @@
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.deps.json
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.dll
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.pdb
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\netstandard2.1\ViaParaTodos.App.Dominio.dll
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\netstandard2.1\ViaParaTodos.App.Dominio.pdb
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.csprojAssemblyReference.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.AssemblyInfoInputs.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.AssemblyInfo.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.csproj.CopyComplete
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.dll
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\netstandard2.1\ViaParaTodos.App.Persistencia.pdb

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "o5h130DEftIjJL8iUIBoMH+R7GiGEcZW5XoAqZ7qIdhkkb6ZUHXCsimN1jDM0twScxP11jIogThGfvmwIQ920g==",
+  "success": true,
+  "projectFilePath": "C:\\ViaParaTodos\\ViaParaTodos.App\\ViaParaTodos.App.Dominio\\ViaParaTodos.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DANIEL ANDRES\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\DANIEL ANDRES\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
