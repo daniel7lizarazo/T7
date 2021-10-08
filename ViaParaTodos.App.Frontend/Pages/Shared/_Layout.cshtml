@@ -1,0 +1,250 @@
+﻿<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ViaParaTodos.App.Frontend</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">ViaParaTodos.App.Frontend</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - ViaParaTodos.App.Frontend - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ViaParaTodos</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<!-- CSS only -->
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js">
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+	</script>
+
+
+	<style>
+		.city {
+			background-color: tomato;
+			color: white;
+			border: 2px solid black;
+			margin: 20px;
+			padding: 50px;
+			width: 70%;
+			height: 100%;
+			position: relative;
+			display: block;
+		}
+
+		.responsive {
+			max-width: 100%;
+			position: relative;
+			display: block;
+			width: 50%;
+			height: auto;
+    }
+  .circle {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  border-radius: 50%;
+}
+	</style>
+</head>
+
+<!--<body>-->
+<body style="background-image:url('https://cdn.dribbble.com/users/238904/screenshots/5334195/wrr_roadanimations.gif');">
+
+	<center>
+    <div class="circle"><br><br>
+    <img src="Agente/ag3.JPG" class="image" width="auto" height="130px">
+		<H1>AGENTE</H1>
+		<input type="text" id="lname" name="lname" value="AGEN234567">
+    </div>
+      <br><br>
+			</center>
+
+<div class="container p-5 my-5 bg-dark text-white" style="max-width:75%">
+		  <img src="Agente/Conductor4.JPG" align="right"  class="image" width="auto" height="130px">
+  <h1>CONDUCTOR</h1>
+  <p>Consulte, diligencie, actualice o elimine el conductor.</p>
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">CONDUCTOR</button>
+  <div id="demo" class="collapse"><br>
+	<center>
+  <H1>DATOS DEL CONDUCTOR</H1>
+  <label for="fname">Identificación:</label><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" id="identi" name="identi" value="">&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" class="btn btn-primary" onclick="alert('Buscando el Conductor......')" >Buscar</button>
+  <br><br>
+  <label for="Tid">Tipo de documento:</label>
+  <select id="Tid">
+  <option value="Cédula">Cédula</option>
+  <option value="Tarjeta">Tarjeta</option>
+  <option value="Extrajería">Extrajería</option>
+</select>
+  <br><br>
+  <label for="lname">Nombre:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Digite aquí el Nombre" value="">
+  <br><br>
+   <label for="lname">Apellidos:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Digite aquí el Apellido" value=""
+  ><br><br>
+   <label for="lname">Teléfono:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Digite aquí el Teléfono" value=""
+  ><br><br>
+   <label for="lname">Dirección:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Digite aquí la Dirección" value="">
+  <br><br>
+   <label for="Genero">Género:</label>
+  <select id="Genero">
+  <option value="Masculino">Masculino</option>
+  <option value="Femino">Femenino</option>
+  <option value="Trans">Trans</option>
+  </select>
+  <br><br>
+   <label for="lname">Fecha de nacimiento:</label><br>
+  <input type="date" id="lname" name="lname" value="">
+
+  <br><br>
+
+  </div>
+</div>
+
+</center>
+<div class="container p-5 my-5 bg-warning text-black" style="max-width:75%">
+  <img src="Agente/vehiculos.png" align="right"  class="image" width="auto" height="130px">
+  <h1>VEHÍCULO</h1>
+  <p>Consulte, diligencie, actualice o elimine el Vehículo.</p>
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo2">VEHÍCULO</button>
+  <div id="demo2" class="collapse"><br>
+		<center>
+   <H1>DATOS DEL VEHÍCULO</H1>
+  <label for="fname">Placa:</label><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" id="identi" name="identi" value="">&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" class="btn btn-primary" onclick="alert('Buscando el Vehículo......')" >Buscar</button>
+  <br><br>
+  <label for="lname">Modelo:</label><br>
+  <input type="text" id="lname" name="lname" value="">
+  <br><br>
+  <label for="lname">Marca:</label><br>
+  <input type="text" id="lname" name="lname" value="">
+  <br><br>
+   <label for="lname">Línea:</label><br>
+  <input type="text" id="lname" name="lname" value=""
+  ><br><br>
+   <label for="lname">Color:</label><br>
+  <input type="text" id="lname" name="lname" value=""
+  ><br><br>
+   <label for="lname">Tipo:</label><br>
+  <input type="text" id="lname" name="lname" value="">
+  <br><br>
+   <label for="Cservicio">Clase de servicio:</label><br>
+  <select id="Cservicio">
+  <option value="Privado">Privado</option>
+  <option value="Público">Público</option>
+    </select>
+  <br><br>
+
+  </div>
+</div>
+
+
+</center>
+
+<div class="container p-5 my-5 bg-dark text-white" style="max-width:75%">
+  <img src="Agente/Accidente2.png" align="right"  class="responsive2" class="image" width="auto" height="130px">
+  <h1>ACCIDENTE</h1>
+  <p>Consulte, diligencie, actualice o elimine.</p>
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo3">ACCIDENTE</button>
+  <div id="demo3" class="collapse">
+<br>
+<center>
+<H1>ACCIDENTE</H1>
+  <br>
+  <label for="lname">Fecha-Accidente:</label>
+  <input type="date" id="lname" name="lname" value=""><br><br>
+  <label for="lname">Hora-Accidente:</label>
+  <input type="time" id="lname" name="lname" value="">
+  <br><br>
+  <label for="lname"><h2>Gravedad</h2></label><br>
+  <input type="radio" id="muerto" name="fav_language" value="Muerto">
+  <label for="muerto">Muerto</label><br>
+  <input type="radio" id="herido" name="fav_language" value="Herido">
+  <label for="herido">Herido</label><br>
+  <br>
+
+
+<div class="mb-3">
+  <label for="formFile" class="form-label"><h2>Adjunte una foto</h2></label>
+  <input class="form-control" type="file" id="formFile">
+</div>
+<br><br>
+
+  <label for="exampleFormControlTextarea1" class="form-label"><h2>Descripción del Accidente</h2></label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <br><br>
+
+  </div>
+</div>
+<br>
+<br>
+</center>
+<center>
+  <input type="submit" class="btn btn-success" value="Grabar">
+  <input type="submit" class="btn btn-danger" value="Eliminar">
+  <input type="submit" class="btn btn-info" value="Actualizar">
+  <input type="submit" class="btn btn-warning" value="Registrar Accidente">
+  </center>
+
+
+  </body>
+</html>

@@ -8,7 +8,7 @@ using ViaParaTodos.App.Persistencia.AppRepositorios;
 
 namespace ViaParaTodos.App.Persistencia.Migrations
 {
-    [DbContext(typeof(Persistencia.AppRepositorios.AppContext))]
+    [DbContext(typeof(AppRepositorios.AppContext))]
     partial class AppContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -26,94 +26,53 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("AgenteTransitoId")
+                    b.Property<int>("AccidenteAgentesTransitoId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ConductoresId")
+                    b.Property<int?>("AgentesTransitoId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Fecha")
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Hora")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("LocalizacionId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PropietariosId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("VehiculosId")
-                        .HasColumnType("int");
+                    b.Property<string>("Gravedad")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AgenteTransitoId");
-
-                    b.HasIndex("ConductoresId");
-
-                    b.HasIndex("LocalizacionId");
-
-                    b.HasIndex("PropietariosId");
-
-                    b.HasIndex("VehiculosId");
+                    b.HasIndex("AgentesTransitoId");
 
                     b.ToTable("Accidente");
                 });
 
-            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Documentos", b =>
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.AgentesTransito", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<bool>("Planilla")
-                        .HasColumnType("bit");
+                    b.Property<string>("Contrasena")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("SOAT")
-                        .HasColumnType("bit");
+                    b.Property<string>("Identificacion")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("TarjetaMecanica")
-                        .HasColumnType("bit");
+                    b.Property<string>("Rango")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("TarjetaOficial")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("TarjetaPropiedad")
-                        .HasColumnType("bit");
+                    b.Property<string>("Usuario")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Documentos");
+                    b.ToTable("AgentesTransito");
                 });
 
-            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Localizacion", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("Barrio")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Ciudad")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<float>("Latitud")
-                        .HasColumnType("real");
-
-                    b.Property<float>("Longitus")
-                        .HasColumnType("real");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Localizacion");
-                });
-
-            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Personas", b =>
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Ciudadanos", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -123,11 +82,11 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                     b.Property<string>("Apellidos")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
+                    b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Genero")
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombres")
@@ -136,14 +95,79 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                     b.Property<string>("NumeroDoc")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("NumeroTelefono")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TipoDoc")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Personas");
+                    b.ToTable("Ciudadanos");
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Personas");
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Ciudadanos");
+                });
+
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Localizacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Ciudad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Latitud")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LocalizacionAccidenteId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Longitud")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Zona")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LocalizacionAccidenteId")
+                        .IsUnique();
+
+                    b.ToTable("Localizacion");
+                });
+
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.TablaVC", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("AccidenteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AccidenteTablaVCId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ConductoresTablaVCId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VehiculosTablaVCId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccidenteId");
+
+                    b.HasIndex("ConductoresTablaVCId")
+                        .IsUnique();
+
+                    b.HasIndex("VehiculosTablaVCId")
+                        .IsUnique();
+
+                    b.ToTable("TablaVC");
                 });
 
             modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Vehiculos", b =>
@@ -153,17 +177,8 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("ClaseServicio")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Color")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ConductoresId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("DocumentosId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Linea")
                         .HasColumnType("nvarchar(max)");
@@ -171,72 +186,20 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                     b.Property<string>("Marca")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Modelo")
+                    b.Property<int?>("Modelo")
                         .HasColumnType("int");
 
                     b.Property<string>("Placa")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PropietariosId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Tipo")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ConductoresId");
-
-                    b.HasIndex("DocumentosId");
-
-                    b.HasIndex("PropietariosId");
 
                     b.ToTable("Vehiculos");
                 });
 
-            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Administrador", b =>
-                {
-                    b.HasBaseType("ViaParaTodos.App.Dominio.Entidades.Personas");
-
-                    b.Property<string>("Contrasena")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Administrador_Contrasena");
-
-                    b.Property<string>("Usuario")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Administrador_Usuario");
-
-                    b.HasDiscriminator().HasValue("Administrador");
-                });
-
-            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.AgenteTransito", b =>
-                {
-                    b.HasBaseType("ViaParaTodos.App.Dominio.Entidades.Personas");
-
-                    b.Property<string>("Contrasena")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IdAgente")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Rango")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Usuario")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("AgenteTransito");
-                });
-
             modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Conductores", b =>
                 {
-                    b.HasBaseType("ViaParaTodos.App.Dominio.Entidades.Personas");
-
-                    b.Property<string>("Direccion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NumeroTelefono")
-                        .HasColumnType("nvarchar(max)");
+                    b.HasBaseType("ViaParaTodos.App.Dominio.Entidades.Ciudadanos");
 
                     b.Property<DateTime>("VigenciaLicencia")
                         .HasColumnType("datetime2");
@@ -244,65 +207,103 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Conductores");
                 });
 
-            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Propietarios", b =>
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Vinculados", b =>
                 {
-                    b.HasBaseType("ViaParaTodos.App.Dominio.Entidades.Personas");
+                    b.HasBaseType("ViaParaTodos.App.Dominio.Entidades.Ciudadanos");
 
-                    b.HasDiscriminator().HasValue("Propietarios");
+                    b.Property<int?>("AccidenteId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Afectado")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Testigo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("VinculadosAccidenteId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("AccidenteId");
+
+                    b.HasDiscriminator().HasValue("Vinculados");
                 });
 
             modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Accidente", b =>
                 {
-                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.AgenteTransito", "AgenteTransito")
-                        .WithMany()
-                        .HasForeignKey("AgenteTransitoId");
+                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.AgentesTransito", "AgentesTransito")
+                        .WithMany("Accidente")
+                        .HasForeignKey("AgentesTransitoId");
+
+                    b.Navigation("AgentesTransito");
+                });
+
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Localizacion", b =>
+                {
+                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Accidente", "Accidente")
+                        .WithOne("Localizacion")
+                        .HasForeignKey("ViaParaTodos.App.Dominio.Entidades.Localizacion", "LocalizacionAccidenteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Accidente");
+                });
+
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.TablaVC", b =>
+                {
+                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Accidente", "Accidente")
+                        .WithMany("TablaVC")
+                        .HasForeignKey("AccidenteId");
 
                     b.HasOne("ViaParaTodos.App.Dominio.Entidades.Conductores", "Conductores")
-                        .WithMany()
-                        .HasForeignKey("ConductoresId");
-
-                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Localizacion", "Localizacion")
-                        .WithMany()
-                        .HasForeignKey("LocalizacionId");
-
-                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Propietarios", "Propietarios")
-                        .WithMany()
-                        .HasForeignKey("PropietariosId");
+                        .WithOne("TablaVC")
+                        .HasForeignKey("ViaParaTodos.App.Dominio.Entidades.TablaVC", "ConductoresTablaVCId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("ViaParaTodos.App.Dominio.Entidades.Vehiculos", "Vehiculos")
-                        .WithMany()
-                        .HasForeignKey("VehiculosId");
+                        .WithOne("TablaVC")
+                        .HasForeignKey("ViaParaTodos.App.Dominio.Entidades.TablaVC", "VehiculosTablaVCId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.Navigation("AgenteTransito");
+                    b.Navigation("Accidente");
 
                     b.Navigation("Conductores");
-
-                    b.Navigation("Localizacion");
-
-                    b.Navigation("Propietarios");
 
                     b.Navigation("Vehiculos");
                 });
 
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Vinculados", b =>
+                {
+                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Accidente", "Accidente")
+                        .WithMany("Vinculados")
+                        .HasForeignKey("AccidenteId");
+
+                    b.Navigation("Accidente");
+                });
+
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Accidente", b =>
+                {
+                    b.Navigation("Localizacion");
+
+                    b.Navigation("TablaVC");
+
+                    b.Navigation("Vinculados");
+                });
+
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.AgentesTransito", b =>
+                {
+                    b.Navigation("Accidente");
+                });
+
             modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Vehiculos", b =>
                 {
-                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Conductores", "Conductores")
-                        .WithMany()
-                        .HasForeignKey("ConductoresId");
+                    b.Navigation("TablaVC");
+                });
 
-                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Documentos", "Documentos")
-                        .WithMany()
-                        .HasForeignKey("DocumentosId");
-
-                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Propietarios", "Propietarios")
-                        .WithMany()
-                        .HasForeignKey("PropietariosId");
-
-                    b.Navigation("Conductores");
-
-                    b.Navigation("Documentos");
-
-                    b.Navigation("Propietarios");
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Conductores", b =>
+                {
+                    b.Navigation("TablaVC");
                 });
 #pragma warning restore 612, 618
         }

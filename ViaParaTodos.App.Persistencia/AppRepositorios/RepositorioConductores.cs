@@ -1,4 +1,3 @@
-using System.Security.AccessControl;
 using System.Linq;
 using System.Collections.Generic;
 using ViaParaTodos.App.Dominio.Entidades;
@@ -39,10 +38,9 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
                 ConductorEncontrado.Apellidos=conductor.Apellidos;
                 ConductorEncontrado.TipoDoc=conductor.TipoDoc;
                 ConductorEncontrado.NumeroDoc=conductor.NumeroDoc;
-                ConductorEncontrado.Genero=conductor.Genero;
-                ConductorEncontrado.VigenciaLicencia=conductor.VigenciaLicencia;
                 ConductorEncontrado.Direccion=conductor.Direccion;
                 ConductorEncontrado.NumeroTelefono=conductor.NumeroTelefono;
+                ConductorEncontrado.VigenciaLicencia=conductor.VigenciaLicencia;
                 _appContext.SaveChanges();
             }
             return ConductorEncontrado;
