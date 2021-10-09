@@ -1,76 +1,28 @@
-﻿<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ViaParaTodos.App.Frontend</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">ViaParaTodos.App.Frontend</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - ViaParaTodos.App.Frontend - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @RenderSection("Scripts", required: false)
-</body>
-</html>
--->
+﻿@RenderBody()
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ViaParaTodos</title>
+	<title>repl.it</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<!-- CSS only -->
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js">
+
 	</script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
 	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+
 	</script>
 
-
-	<style>
+		<style>
 		.city {
 			background-color: tomato;
 			color: white;
@@ -89,42 +41,110 @@
 			display: block;
 			width: 50%;
 			height: auto;
-    }
-  .circle {
-  height: 300px;
-  width: 300px;
-  background-color: tomato;
-  border-radius: 50%;
+		}
+
+		.circle {
+			height: 300px;
+			width: 300px;
+			background-color: currentColor;
+			border-radius: 50%;
+		}
+
+		.boton-barras {
+			font-weight: bold;
+			border-radius: 50%;
+			border: none;
+			color: #FFFFFF;
+			text-align: center;
+			font-size: 28px;
+			width: 70px;
+			height: 70px;
+			transition: all 0.5s;
+			cursor: pointer;
+
+		}
+
+    #grad1 {
+  height: auto;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to left, black ,#BD982D,#BDB42D,#FFC900, #FFEC00);
 }
 	</style>
 </head>
+<div id="grad1"><img src="https://agente15.camilocasas.repl.co/Agente/Logo.png"  width="250px" height="auto"><br>
 
-<!--<body>-->
-<body style="background-image:url('https://cdn.dribbble.com/users/238904/screenshots/5334195/wrr_roadanimations.gif');">
+<img src="https://agente15.camilocasas.repl.co/Agente/menu2.png" style="width:100%;">
 
-	<center>
-    <div class="circle"><br><br>
-    <img src="Agente/ag3.JPG" class="image" width="auto" height="130px">
-		<H1>AGENTE</H1>
-		<input type="text" id="lname" name="lname" value="AGEN234567">
+</div>
+	<body style="background-image:url('https://agente15.camilocasas.repl.co/Agente/ELE_Base.png');" > 
+
+<br>
+		<center>
+			<div class="circle"><br>
+    <img src="https://agente15.camilocasas.repl.co/Agente/Perfil-Agente.png"  width="250px" height="220px">
+		<input type="text" style="
+    width: 35%; id="lname" name="lname" value="AGEN234567">
     </div>
-      <br><br>
+    
 			</center>
 
 <div class="container p-5 my-5 bg-dark text-white" style="max-width:75%">
-		  <img src="Agente/Conductor4.JPG" align="right"  class="image" width="auto" height="130px">
+<center>
+    <label for="lname">Fecha-Accidente:</label>
+  <input type="date" id="lname" name="lname" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="lname">Hora-Accidente:</label>
+  <input type="time" id="lname" name="lname" value=""><br><br>
+  <label for="lname"><h2>Clase de Accidente</h2></label><br>
+  <input type="radio" id="muerto" name="fav_language" value="Muerto">
+  <label for="muerto">Atropello</label>
+  <input type="radio" id="herido" name="fav_language" value="Herido">
+  <label for="herido">Choque</label>
+  <input type="radio" id="herido" name="fav_language" value="Herido">
+  <label for="herido">Caída</label>
+  <input type="radio" id="herido" name="fav_language" value="Herido">
+  <label for="herido">Volcamiento</label>
+  <br><br>
+<label for="fname">Zona:</label>
+    &nbsp;
+  <select id="Tid">
+  <option value="Cédula">Centro</option>
+  <option value="Tarjeta">Sur</option>
+  <option value="Extrajería">Este</option>
+  <option value="Occidente">Occidente</option>
+</select>&nbsp;&nbsp;&nbsp;&nbsp;
+  <label for="fname">Latitud:</label>
+    &nbsp;
+  <input type="text" id="identi" name="identi" value="">&nbsp;&nbsp;&nbsp;&nbsp;
+  <label for="fname">Longitud:</label>
+    &nbsp;
+  <input type="text" id="identi" name="identi" value="">&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" class="btn btn-primary" onclick="alert('Buscando el Conductor......')" >Buscar</button>
+
+
+
+  </div>
+</div>
+
+</center>
+
+
+<div class="w3-row w3-border" style="max-width:75%;text-align: center;margin: auto;">
+
+<div class="w3-third w3-container w3" style="background-color:#ffb229" >
+		    <img src="https://agente15.camilocasas.repl.co/Agente/Conductor4.png" align="center"  class="image" width="auto" height="130px" data-bs-toggle="collapse" data-bs-target="#demo">
   <h1>CONDUCTOR</h1>
   <p>Consulte, diligencie, actualice o elimine el conductor.</p>
-  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">CONDUCTOR</button>
+<div><center><button type="button" class="boton-barras" style="background-color:yellowgreen" data-bs-toggle="collapse" data-bs-target="#demo">+</button></center></div>
   <div id="demo" class="collapse"><br>
 	<center>
   <H1>DATOS DEL CONDUCTOR</H1>
   <label for="fname">Identificación:</label><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="text" id="identi" name="identi" value="">&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" style="
+    width: 35%; id="identi" name="identi" value="">
   <button type="button" class="btn btn-primary" onclick="alert('Buscando el Conductor......')" >Buscar</button>
   <br><br>
   <label for="Tid">Tipo de documento:</label>
+  <br>
   <select id="Tid">
   <option value="Cédula">Cédula</option>
   <option value="Tarjeta">Tarjeta</option>
@@ -144,6 +164,7 @@
   <input type="text" id="lname" name="lname" placeholder="Digite aquí la Dirección" value="">
   <br><br>
    <label for="Genero">Género:</label>
+   <br>
   <select id="Genero">
   <option value="Masculino">Masculino</option>
   <option value="Femino">Femenino</option>
@@ -154,22 +175,30 @@
   <input type="date" id="lname" name="lname" value="">
 
   <br><br>
+<input type="image" src="https://agente15.camilocasas.repl.co/Icon/AddC.png" alt="Submit" width="48" height="48" onclick="alert('CONDUCTOR AGREGADO......')">
+  
+  <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Update-User.png" alt="Submit" width="50" height="50" onclick="alert('CONDUCTOR ACTUALIZADO......')">
 
+  <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Rev-User.png" alt="Submit" width="48" height="48" onclick="alert('CONDUCTOR ELIMINADO......')">
+
+
+
+<br>
   </div>
 </div>
 
 </center>
-<div class="container p-5 my-5 bg-warning text-black" style="max-width:75%">
-  <img src="Agente/vehiculos.png" align="right"  class="image" width="auto" height="130px">
+
+<div class="w3-third w3-container w3-red">
+  <img src="https://agente15.camilocasas.repl.co/Agente/Vehiculo.png" align="center"  class="image" width="auto" height="130px" data-bs-toggle="collapse" data-bs-target="#demo2">
   <h1>VEHÍCULO</h1>
   <p>Consulte, diligencie, actualice o elimine el Vehículo.</p>
-  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo2">VEHÍCULO</button>
+<div><center><button type="button" class="boton-barras" style="background-color:darkblue" data-bs-toggle="collapse" data-bs-target="#demo2">+</button></center></div>
   <div id="demo2" class="collapse"><br>
 		<center>
    <H1>DATOS DEL VEHÍCULO</H1>
   <label for="fname">Placa:</label><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="text" id="identi" name="identi" value="">&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" id="identi" name="identi" value="">
   <button type="button" class="btn btn-primary" onclick="alert('Buscando el Vehículo......')" >Buscar</button>
   <br><br>
   <label for="lname">Modelo:</label><br>
@@ -192,29 +221,39 @@
   <option value="Privado">Privado</option>
   <option value="Público">Público</option>
     </select>
-  <br><br>
+  <br><br><br>
 
+<input type="image" src="https://agente15.camilocasas.repl.co/Icon/Car-Add.png" alt="Submit" width="48" height="48" onclick="alert('VEHÍCULO AGREGADO......')">
+  
+  <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Car-Update.png" alt="Submit" width="50" height="50" onclick="alert('VEHÍCULO ACTUALIZADO......')">
+
+  <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Car-Rev.png" alt="Submit" width="48" height="48" onclick="alert('VEHÍCULO ELIMINADO......')">
+<br>
   </div>
 </div>
 
 
 </center>
 
-<div class="container p-5 my-5 bg-dark text-white" style="max-width:75%">
-  <img src="Agente/Accidente2.png" align="right"  class="responsive2" class="image" width="auto" height="130px">
+<div class="w3-third w3-container w3-black">
+  <img src="https://agente15.camilocasas.repl.co/Agente/Accidente.png" align="center"  class="responsive2" class="image" width="auto" height="130px" data-bs-toggle="collapse" data-bs-target="#demo3">
   <h1>ACCIDENTE</h1>
-  <p>Consulte, diligencie, actualice o elimine.</p>
-  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo3">ACCIDENTE</button>
-  <div id="demo3" class="collapse">
-<br>
+  <p>Consulte, diligencie, actualice o elimine.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  
+
+
+<div><center><button type="button" class="boton-barras" style="background-color:tomato" data-bs-toggle="collapse" data-bs-target="#demo3">+</button></center></div>
+<div id="demo3" class="collapse">
 <center>
+  <br>
 <H1>ACCIDENTE</H1>
   <br>
-  <label for="lname">Fecha-Accidente:</label>
-  <input type="date" id="lname" name="lname" value=""><br><br>
-  <label for="lname">Hora-Accidente:</label>
-  <input type="time" id="lname" name="lname" value="">
-  <br><br>
+<br>
+  <label for="fname">Accidente:</label><br>
+  <input type="text" id="identi" name="identi" value="">
+  <button type="button" class="btn btn-primary" onclick="alert('Buscando el Accidente......')" >Buscar</button>
+    <br>
+<br>
   <label for="lname"><h2>Gravedad</h2></label><br>
   <input type="radio" id="muerto" name="fav_language" value="Muerto">
   <label for="muerto">Muerto</label><br>
@@ -232,19 +271,13 @@
   <label for="exampleFormControlTextarea1" class="form-label"><h2>Descripción del Accidente</h2></label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   <br><br>
-
+<input type="image" src="https://agente15.camilocasas.repl.co/Icon/Add-Acci.png" alt="Submit" width="48" height="48" onclick="alert('ACCIDENTE REGISTRADO......')">
+  
+  <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Rev-Acci.png" alt="Submit" width="48" height="48" onclick="alert('ACCIDENTE MODIFICADO......')">
   </div>
 </div>
-<br>
-<br>
 </center>
-<center>
-  <input type="submit" class="btn btn-success" value="Grabar">
-  <input type="submit" class="btn btn-danger" value="Eliminar">
-  <input type="submit" class="btn btn-info" value="Actualizar">
-  <input type="submit" class="btn btn-warning" value="Registrar Accidente">
-  </center>
-
+</div>
 
   </body>
 </html>

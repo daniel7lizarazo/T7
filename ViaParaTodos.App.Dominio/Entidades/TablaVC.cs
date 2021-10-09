@@ -7,7 +7,6 @@ namespace ViaParaTodos.App.Dominio.Entidades
         public int VehiculosTablaVCId {set;get;}
         public Conductores Conductores {set;get;}
         public int ConductoresTablaVCId {set;get;}
-        public Accidente Accidente {set;get;}
         public int AccidenteTablaVCId {set;get;}
     }
 }

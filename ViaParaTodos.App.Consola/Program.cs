@@ -31,7 +31,7 @@ namespace ViaParaTodos.App.Consola
         }
         private static void AddConductor()
         {
-            var conductor = new Conductores
+            Conductores conductor = new Conductores
             {
                 Nombres="Nicolas",
                 Apellidos="Perez",
@@ -45,7 +45,7 @@ namespace ViaParaTodos.App.Consola
         }
         private static void UpdateConductor()
         {
-            var conductor = new Conductores
+            Conductores conductor = new Conductores
             {
                 Id=1,
                 Nombres="Nicolazol",
@@ -60,12 +60,12 @@ namespace ViaParaTodos.App.Consola
         }
         private static void SearchConductor(int idConductor)        
         {
-            var conductor = _repoConductores.GetConductor(idConductor);
+            Conductores conductor = _repoConductores.GetConductor(idConductor);
             Console.WriteLine(conductor.Nombres+" "+conductor.Apellidos);
         }
         private static void AddVehiculo()
         {
-            var vehiculo = new Vehiculos
+            Vehiculos vehiculo = new Vehiculos
             {
                 Placa="KKK999",
                 Modelo=2019,
@@ -77,12 +77,12 @@ namespace ViaParaTodos.App.Consola
         } 
         private static void SearchVehiculo(int idVehiculo)
         {
-            var vehiculo = _repoVehiculos.GetVehiculos(idVehiculo);
+            Vehiculos vehiculo = _repoVehiculos.GetVehiculos(idVehiculo);
             Console.WriteLine(vehiculo.Placa+" "+vehiculo.Marca);
         }
         private static void AddAgentesTransito()
         {
-            var agenteTransito = new AgentesTransito
+            AgentesTransito agenteTransito = new AgentesTransito
             {
                 Usuario="El papucho",
                 Contrasena="elaccidentado69",
@@ -93,7 +93,7 @@ namespace ViaParaTodos.App.Consola
         } 
         private static void AddAccidente()
         {
-            var accidente = new Accidente
+            Accidente accidente = new Accidente
             {
                 Fecha=new DateTime(2021,02,02),
                 Descripcion="Moto carro, pum pum, crack crack",
@@ -104,7 +104,7 @@ namespace ViaParaTodos.App.Consola
         } 
         private static void AddTablaVC()
         {
-            var tablaVC = new TablaVC
+            TablaVC tablaVC = new TablaVC
             {
                 VehiculosTablaVCId=1,
                 ConductoresTablaVCId=1,
@@ -114,7 +114,7 @@ namespace ViaParaTodos.App.Consola
         } 
         private static void AddVinculados()
         {
-            var vinculado = new Vinculados
+            Vinculados vinculado = new Vinculados
             {
                 Nombres="Andrea",
                 Apellidos="Becerra",
@@ -130,7 +130,7 @@ namespace ViaParaTodos.App.Consola
         } 
         private static void AddLocalizacion()
         {
-            var localizacion = new Localizacion
+            Localizacion localizacion = new Localizacion
             {
                 Ciudad="Bucaramanga",
                 Zona="AnilloVial",
