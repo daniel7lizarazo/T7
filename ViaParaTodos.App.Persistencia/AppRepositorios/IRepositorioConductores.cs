@@ -10,5 +10,6 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         Conductores UpdateConductor(Conductores conductor);
         void DeleteConductores(int idConductor);
         Conductores GetConductor(int idConductor);
+        Conductores GetConductorByDocumento(string ConductorDocumento);
     }
 }

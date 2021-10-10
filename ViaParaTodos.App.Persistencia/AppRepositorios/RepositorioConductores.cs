@@ -55,9 +55,12 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         }
         Conductores IRepositorioConductores.GetConductor(int idConductor)
         {
-            
             return _appContext.Conductores.FirstOrDefault(c => c.Id == idConductor);
         }
- 
+
+        Conductores IRepositorioConductores.GetConductorByDocumento(string ConductorDocumento)
+        {
+            return _appContext.Conductores.FirstOrDefault(c => c.NumeroDoc == ConductorDocumento);
+        }
     }
 }

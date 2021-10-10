@@ -27,19 +27,20 @@ namespace ViaParaTodos.App.Consola
             //AddLocalizacion();
             //UpdateConductor();
             SearchConductor(1);
+            SearchConductorDocumento("963852714");
             SearchVehiculo(1);
         }
         private static void AddConductor()
         {
             Conductores conductor = new Conductores
             {
-                Nombres="Nicolas",
-                Apellidos="Perez",
-                TipoDoc="Cedula",
-                NumeroDoc="2086568973",
+                Nombres="Pepito",
+                Apellidos="Gomez",
+                TipoDoc="Visa",
+                NumeroDoc="963852714",
                 VigenciaLicencia=new DateTime (2022,01,01),
-                Direccion="Calle 86 #5-63",
-                NumeroTelefono="999999999"
+                Direccion="Calle 73335-63",
+                NumeroTelefono="979846516"
             };
             _repoConductores.AddConductor(conductor);
         }
@@ -61,6 +62,11 @@ namespace ViaParaTodos.App.Consola
         private static void SearchConductor(int idConductor)        
         {
             Conductores conductor = _repoConductores.GetConductor(idConductor);
+            Console.WriteLine(conductor.Nombres+" "+conductor.Apellidos);
+        }
+        private static void SearchConductorDocumento(string ConductorDocumento)        
+        {
+            Conductores conductor = _repoConductores.GetConductorByDocumento(ConductorDocumento);
             Console.WriteLine(conductor.Nombres+" "+conductor.Apellidos);
         }
         private static void AddVehiculo()
