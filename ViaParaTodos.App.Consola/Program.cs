@@ -2,6 +2,7 @@
 using ViaParaTodos.App.Dominio.Entidades;
 using ViaParaTodos.App.Persistencia.AppRepositorios;
 using System;
+using System.Collections.Generic;
 
 namespace ViaParaTodos.App.Consola
 {
@@ -26,10 +27,12 @@ namespace ViaParaTodos.App.Consola
             //AddVinculados();
             //AddLocalizacion();
             //UpdateConductor();
-            SearchConductor(1);
-            SearchConductorDocumento("963852714");
-            SearchVehiculo(1);
+            //SearchConductor(1);
+            //SearchConductorDocumento("963852714");
+            //SearchVehiculo(1);
+            SearchAllConductores();
         }
+
         private static void AddConductor()
         {
             Conductores conductor = new Conductores
@@ -44,6 +47,7 @@ namespace ViaParaTodos.App.Consola
             };
             _repoConductores.AddConductor(conductor);
         }
+
         private static void UpdateConductor()
         {
             Conductores conductor = new Conductores
@@ -59,16 +63,29 @@ namespace ViaParaTodos.App.Consola
             };
             _repoConductores.UpdateConductor(conductor);
         }
+
         private static void SearchConductor(int idConductor)        
         {
             Conductores conductor = _repoConductores.GetConductor(idConductor);
             Console.WriteLine(conductor.Nombres+" "+conductor.Apellidos);
         }
+
         private static void SearchConductorDocumento(string ConductorDocumento)        
         {
             Conductores conductor = _repoConductores.GetConductorByDocumento(ConductorDocumento);
             Console.WriteLine(conductor.Nombres+" "+conductor.Apellidos);
         }
+
+        private static void SearchAllConductores()        
+        {
+            IEnumerable<Conductores> AllConductores = _repoConductores.GetAllConductores();
+
+            foreach (Conductores conductor in AllConductores)
+            {
+                Console.WriteLine(conductor.Nombres+" "+conductor.Apellidos);
+            }
+        }
+
         private static void AddVehiculo()
         {
             Vehiculos vehiculo = new Vehiculos
@@ -81,11 +98,13 @@ namespace ViaParaTodos.App.Consola
             };
             _repoVehiculos.AddVehiculos(vehiculo);
         } 
+
         private static void SearchVehiculo(int idVehiculo)
         {
             Vehiculos vehiculo = _repoVehiculos.GetVehiculos(idVehiculo);
             Console.WriteLine(vehiculo.Placa+" "+vehiculo.Marca);
         }
+
         private static void AddAgentesTransito()
         {
             AgentesTransito agenteTransito = new AgentesTransito
@@ -97,6 +116,7 @@ namespace ViaParaTodos.App.Consola
             };
             _repoAgentesTransito.AddAgentesTransito(agenteTransito);
         } 
+
         private static void AddAccidente()
         {
             Accidente accidente = new Accidente
@@ -108,6 +128,7 @@ namespace ViaParaTodos.App.Consola
             };
             _repoAccidente.AddAccidente(accidente);
         } 
+
         private static void AddTablaVC()
         {
             TablaVC tablaVC = new TablaVC
@@ -118,6 +139,7 @@ namespace ViaParaTodos.App.Consola
             };
             _repoTablaVC.AddTablaVC(tablaVC);
         } 
+
         private static void AddVinculados()
         {
             Vinculados vinculado = new Vinculados
@@ -134,6 +156,7 @@ namespace ViaParaTodos.App.Consola
             };
             _repoVinculados.AddVinculados(vinculado);
         } 
+
         private static void AddLocalizacion()
         {
             Localizacion localizacion = new Localizacion
