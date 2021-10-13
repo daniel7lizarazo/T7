@@ -10,5 +10,6 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         AgentesTransito UpdateAgentesTransito(AgentesTransito angenteTransito);
         void DeleteAgentesTransito(int idAgentesTransito);
         AgentesTransito GetAgentesTransito (int idAgentesTransito);
+        AgentesTransito GetAgentesTransitoByIdentificacion (string idAgentesTransito);
     }
 }

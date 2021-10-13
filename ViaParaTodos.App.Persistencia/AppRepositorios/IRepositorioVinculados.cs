@@ -10,5 +10,6 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         Vinculados UpdateVinculados(Vinculados vinculado);
         void DeleteVinculados(int idVinculados);
         Vinculados GetVinculados(int idVinculados);
+        Vinculados GetVinculadosByDocumento (string VinculadosIdentificacion);
     }
 }

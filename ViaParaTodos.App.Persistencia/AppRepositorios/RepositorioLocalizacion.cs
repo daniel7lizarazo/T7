@@ -39,6 +39,11 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             return _appContext.Localizacion;
         }
 
+        Localizacion IRepositorioLocalizacion.GetLocalizacionByZona(string zona)
+        {
+            return _appContext.Localizacion.FirstOrDefault(l => l.Zona == zona);
+        }
+
         Localizacion IRepositorioLocalizacion.GetLocalizacion(int idLocalizacion)
         {
             return _appContext.Localizacion.FirstOrDefault(l => l.Id == idLocalizacion);

@@ -10,5 +10,6 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         Vehiculos UpdateVehiculos(Vehiculos vehiculo);
         void DeleteVehiculos (int idVehiculo);
         Vehiculos GetVehiculos (int idVehiculo);
+        Vehiculos GetVehiculosByPlaca (string PlacaVehiculo);
     }
 }

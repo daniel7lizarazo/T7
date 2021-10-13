@@ -11,6 +11,7 @@ namespace ViaParaTodos.App.Consola
         private static IRepositorioConductores _repoConductores= new RepositorioConductores(new Persistencia.AppRepositorios.AppContext());
         private static IRepositorioVehiculos _repoVehiculos = new RepositorioVehiculos(new Persistencia.AppRepositorios.AppContext());
         private static IRepositorioTablaVC _repoTablaVC = new RepositorioTablaVC(new Persistencia.AppRepositorios.AppContext());
+        private static IRepositorioTablaVA _repoTablaVA = new RepositorioTablaVA(new Persistencia.AppRepositorios.AppContext());
         private static IRepositorioVinculados _repoVinculados = new RepositorioVinculados(new Persistencia.AppRepositorios.AppContext());
         private static IRepositorioLocalizacion _repoLocalizacion  = new RepositorioLocalizacion (new Persistencia.AppRepositorios.AppContext());
         private static IRepositorioAccidente _repoAccidente  = new RepositorioAccidente (new Persistencia.AppRepositorios.AppContext());
@@ -20,7 +21,7 @@ namespace ViaParaTodos.App.Consola
         {
             Console.WriteLine("Hello World! From Console Entity Framework Core");
             //AddVehiculo();
-            AddConductor();
+            //AddConductor();
             //AddAgentesTransito();
             //AddAccidente();
             //AddTablaVC();
@@ -31,7 +32,38 @@ namespace ViaParaTodos.App.Consola
             //SearchConductorDocumento("963852714");
             //SearchVehiculo(1);
             //SearchAllConductores();
+            ReportarAccidente(new DateTime (2024,09,13),"Pretty nasty accident", "Nasty as hell", "C65L25", "Sur", "XXX-999", "2531246", "123456");
         }
+private static void ReportarAccidente(DateTime fecha, string descripcion, string gravedad, string agenteIdentificacion, string zona, string placa, string idconductor, string idvinculado)
+{
+    Accidente accidente= new Accidente
+    {
+        Fecha = fecha,
+        Descripcion = descripcion,
+        Gravedad = gravedad,
+        AccidenteLocalizacionId = _repoLocalizacion.GetLocalizacionByZona(zona).Id,
+        AccidenteAgentesTransitoId = _repoAgentesTransito.GetAgentesTransitoByIdentificacion(agenteIdentificacion).Id 
+    };
+    Accidente accidenteagregado = _repoAccidente.AddAccidente(accidente);
+
+    TablaVC tablavc = new TablaVC
+    {
+        VehiculosTablaVCId = _repoVehiculos.GetVehiculosByPlaca(placa).Id,
+        ConductoresTablaVCId = _repoConductores.GetConductorByDocumento(idconductor).Id,
+        AccidenteTablaVCId = accidenteagregado.Id
+    };
+    _repoTablaVC.AddTablaVC(tablavc);
+
+    TablaVA tablava = new TablaVA
+    {
+        VinculadosId = _repoVinculados.GetVinculadosByDocumento(idvinculado).Id,
+        AccidenteId = accidenteagregado.Id
+    };
+    _repoTablaVA.AddTablaVA(tablava);
+}
+
+
+
 
         private static void AddConductor()
         {
@@ -146,14 +178,14 @@ namespace ViaParaTodos.App.Consola
         {
             Vinculados vinculado = new Vinculados
             {
-                Nombres="Andrea",
-                Apellidos="Becerra",
-                TipoDoc="Pasaporte",
-                NumeroDoc="987654321",
-                Direccion="Carrera 45 #55-20",
-                NumeroTelefono="333222111",
-                Testigo=true,
-                Afectado=false,
+                Nombres="Alexander",
+                Apellidos="Vargas",
+                TipoDoc="CC",
+                NumeroDoc="456123",
+                Direccion="Cr 33 #9-75",
+                NumeroTelefono="888888888",
+                Testigo=false,
+                Afectado=true,
             };
             _repoVinculados.AddVinculados(vinculado);
         } 

@@ -41,6 +41,11 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             return _appContext.Vehiculos;
         }
 
+        Vehiculos IRepositorioVehiculos.GetVehiculosByPlaca(string PlacaVehiculo)
+        {
+            return _appContext.Vehiculos.FirstOrDefault(v => v.Placa == PlacaVehiculo);
+        }
+
         Vehiculos IRepositorioVehiculos.GetVehiculos(int idVehiculo)
         {
             return _appContext.Vehiculos.FirstOrDefault(v => v.Id == idVehiculo);

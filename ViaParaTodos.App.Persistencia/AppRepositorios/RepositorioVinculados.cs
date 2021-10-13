@@ -39,6 +39,11 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             return _appContext.Vinculados;
         }
 
+        Vinculados IRepositorioVinculados.GetVinculadosByDocumento(string VinculadosDocumento)
+        {
+            return _appContext.Vinculados.FirstOrDefault(v => v.NumeroDoc == VinculadosDocumento);
+        }
+
         Vinculados IRepositorioVinculados.GetVinculados(int idVinculados)
         {
             return _appContext.Vinculados.FirstOrDefault(v => v.Id == idVinculados);

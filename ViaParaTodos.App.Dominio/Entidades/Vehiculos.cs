@@ -1,3 +1,4 @@
+//using System.ComponentMode.DataAnnotations;
 namespace ViaParaTodos.App.Dominio.Entidades
 {
     public class Vehiculos

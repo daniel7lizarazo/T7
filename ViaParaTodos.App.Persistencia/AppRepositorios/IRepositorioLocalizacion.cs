@@ -9,6 +9,7 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         Localizacion UpdateLocalizacion(Localizacion localizacion);
         void DeleteLocalizacion (int idLocalizacion);
         Localizacion GetLocalizacion (int idLocalizacion);
+        Localizacion GetLocalizacionByZona (string zona);
          
     }
 }

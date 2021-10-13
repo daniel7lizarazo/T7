@@ -34,6 +34,11 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             _appContext.SaveChanges();
         }
 
+        AgentesTransito IRepositorioAgentesTransito.GetAgentesTransitoByIdentificacion(string AgentesTransitoIdentificacion)
+        {
+            return _appContext.AgentesTransito.FirstOrDefault(a => a.Identificacion == AgentesTransitoIdentificacion);
+        }
+
         AgentesTransito IRepositorioAgentesTransito.GetAgentesTransito(int idAgentesTransito)
         {
             return _appContext.AgentesTransito.FirstOrDefault(a => a.Id == idAgentesTransito);

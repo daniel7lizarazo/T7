@@ -1,4 +1,5 @@
 using System;
+//using System.ComponentMode.DataAnnotations;
 using System.Collections.Generic;
 
 namespace ViaParaTodos.App.Dominio.Entidades
