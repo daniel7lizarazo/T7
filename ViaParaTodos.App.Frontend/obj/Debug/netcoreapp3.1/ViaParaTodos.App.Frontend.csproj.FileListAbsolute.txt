@@ -81,15 +81,6 @@ E:\DANIEL\T7\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3.1\ViaParaTodos.App.
 E:\DANIEL\T7\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3.1\ViaParaTodos.App.Dominio.pdb
 E:\DANIEL\T7\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3.1\ViaParaTodos.App.Persistencia.pdb
 E:\DANIEL\T7\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Agente\Agente-Acc.cshtml.g.cs
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.csprojAssemblyReference.cache
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.AssemblyInfoInputs.cache
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.AssemblyInfo.cs
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.csproj.CoreCompileInputs.cache
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.MvcApplicationPartsAssemblyInfo.cache
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.RazorAssemblyInfo.cache
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.RazorAssemblyInfo.cs
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.dll
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.pdb
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3.1\appsettings.json
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -145,6 +136,13 @@ C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3.1\ViaParaTodos.App.Persistencia.dll
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3.1\ViaParaTodos.App.Dominio.pdb
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\bin\Debug\netcoreapp3.1\ViaParaTodos.App.Persistencia.pdb
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.csprojAssemblyReference.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.AssemblyInfoInputs.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.AssemblyInfo.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.csproj.CoreCompileInputs.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.MvcApplicationPartsAssemblyInfo.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.RazorAssemblyInfo.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.RazorAssemblyInfo.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.TagHelpers.input.cache
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.TagHelpers.output.cache
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.RazorCoreGenerate.cache
@@ -153,7 +151,6 @@ C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Saludos\List.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
@@ -164,4 +161,6 @@ C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.csproj.CopyComplete
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\staticwebassets\ViaParaTodos.App.Frontend.StaticWebAssets.Manifest.cache
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\staticwebassets\ViaParaTodos.App.Frontend.StaticWebAssets.xml
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.dll
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.pdb
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.genruntimeconfig.cache

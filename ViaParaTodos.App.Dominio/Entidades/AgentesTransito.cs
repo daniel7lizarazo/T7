@@ -10,6 +10,6 @@ namespace ViaParaTodos.App.Dominio.Entidades
         public string Contrasena {set;get;}
         public string Identificacion {set;get;}
         public string Rango {set;get;}
-        public List<Accidente> Accidente {set;get;}
+        public IEnumerable<Accidente> Accidente {set;get;}
     }
 }

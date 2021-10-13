@@ -12,7 +12,6 @@ using Microsoft.Extensions.Hosting;
 
 using ViaParaTodos.App.Persistencia;
 using ViaParaTodos.App.Persistencia.AppRepositorios;
-using ViaParaTodos.App.Dominio.Entidades;
 
 namespace ViaParaTodos.App.Frontend
 {
@@ -29,7 +28,8 @@ namespace ViaParaTodos.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<IRepositorioConductores, RepositorioConductores>();
+            services.AddDbContext<Persistencia.AppRepositorios.AppContext>();
+            services.AddScoped<IRepositorioConductores, RepositorioConductores>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

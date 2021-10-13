@@ -49,11 +49,9 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
          var localizacionEncontrado = _appContext.Localizacion.FirstOrDefault(l => l.Id == localizacion.Id);
             if (localizacionEncontrado!=null)
             {
-                localizacionEncontrado.Ciudad=localizacion.Ciudad;
                 localizacionEncontrado.Zona=localizacion.Zona;
                 localizacionEncontrado.Latitud=localizacion.Latitud;
                 localizacionEncontrado.Longitud=localizacion.Longitud;
-                localizacionEncontrado.LocalizacionAccidenteId=localizacion.LocalizacionAccidenteId;
                 _appContext.SaveChanges();
             }
             return localizacionEncontrado;

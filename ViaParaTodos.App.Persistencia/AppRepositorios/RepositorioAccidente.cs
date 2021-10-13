@@ -55,6 +55,7 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
                 accidenteEncontrado.Descripcion=accidente.Descripcion;
                 accidenteEncontrado.Gravedad=accidente.Gravedad;
                 accidenteEncontrado.AccidenteAgentesTransitoId=accidente.AccidenteAgentesTransitoId;
+                accidenteEncontrado.AccidenteLocalizacionId=accidente.AccidenteLocalizacionId;
                 _appContext.SaveChanges();
             }
             return accidenteEncontrado;

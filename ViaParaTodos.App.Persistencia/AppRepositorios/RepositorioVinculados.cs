@@ -57,7 +57,7 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
                 vinculadoEncontrado.NumeroTelefono=vinculado.NumeroTelefono;
                 vinculadoEncontrado.Testigo=vinculado.Testigo;
                 vinculadoEncontrado.Afectado=vinculado.Afectado;
-                vinculadoEncontrado.VinculadosAccidenteId=vinculado.VinculadosAccidenteId;
+                //vinculadoEncontrado.VinculadosAccidenteId=vinculado.VinculadosAccidenteId;
                 _appContext.SaveChanges();
             }
             return vinculadoEncontrado;

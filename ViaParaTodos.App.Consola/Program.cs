@@ -20,7 +20,7 @@ namespace ViaParaTodos.App.Consola
         {
             Console.WriteLine("Hello World! From Console Entity Framework Core");
             //AddVehiculo();
-            //AddConductor();
+            AddConductor();
             //AddAgentesTransito();
             //AddAccidente();
             //AddTablaVC();
@@ -30,20 +30,20 @@ namespace ViaParaTodos.App.Consola
             //SearchConductor(1);
             //SearchConductorDocumento("963852714");
             //SearchVehiculo(1);
-            SearchAllConductores();
+            //SearchAllConductores();
         }
 
         private static void AddConductor()
         {
             Conductores conductor = new Conductores
             {
-                Nombres="Pepito",
-                Apellidos="Gomez",
-                TipoDoc="Visa",
-                NumeroDoc="963852714",
-                VigenciaLicencia=new DateTime (2022,01,01),
-                Direccion="Calle 73335-63",
-                NumeroTelefono="979846516"
+                Nombres="Paco",
+                Apellidos="Cheveroni",
+                TipoDoc="CE",
+                NumeroDoc="457895",
+                VigenciaLicencia=new DateTime (2024,09,13),
+                Direccion="Cl 2 N 1-17 Sur",
+                NumeroTelefono="578963"
             };
             _repoConductores.AddConductor(conductor);
         }
@@ -121,12 +121,14 @@ namespace ViaParaTodos.App.Consola
         {
             Accidente accidente = new Accidente
             {
-                Fecha=new DateTime(2021,02,02),
-                Descripcion="Moto carro, pum pum, crack crack",
-                Gravedad="Moderada",
-                AccidenteAgentesTransitoId=1
+                Fecha=new DateTime(2021,05,05),
+                Descripcion="Pues se estrellaron pero no hubo nada de especial, una pierna partidita",
+                Gravedad="No tan grave you know",
+                AccidenteAgentesTransitoId=1,
+                AccidenteLocalizacionId=1
             };
-            _repoAccidente.AddAccidente(accidente);
+            var accidenteAdded = _repoAccidente.AddAccidente(accidente);
+            Console.WriteLine("ID:"+accidenteAdded.Id);
         } 
 
         private static void AddTablaVC()
@@ -152,7 +154,6 @@ namespace ViaParaTodos.App.Consola
                 NumeroTelefono="333222111",
                 Testigo=true,
                 Afectado=false,
-                VinculadosAccidenteId=1
             };
             _repoVinculados.AddVinculados(vinculado);
         } 
@@ -161,11 +162,9 @@ namespace ViaParaTodos.App.Consola
         {
             Localizacion localizacion = new Localizacion
             {
-                Ciudad="Bucaramanga",
                 Zona="AnilloVial",
                 Latitud="203.6589.6633",
                 Longitud="693.6489.4652",
-                LocalizacionAccidenteId=1
             };
             _repoLocalizacion.AddLocalizacion(localizacion);
         } 

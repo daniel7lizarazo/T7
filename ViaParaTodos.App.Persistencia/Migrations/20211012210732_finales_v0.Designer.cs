@@ -10,8 +10,8 @@ using ViaParaTodos.App.Persistencia.AppRepositorios;
 namespace ViaParaTodos.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppRepositorios.AppContext))]
-    [Migration("20211009152343_final_v1")]
-    partial class final_v1
+    [Migration("20211012210732_finales_v0")]
+    partial class finales_v0
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,7 +31,10 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                     b.Property<int>("AccidenteAgentesTransitoId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("AgentesTransitoId")
+                    b.Property<int>("AccidenteLocalizacionId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("AgenteIdId")
                         .HasColumnType("int");
 
                     b.Property<string>("Descripcion")
@@ -45,7 +48,10 @@ namespace ViaParaTodos.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AgentesTransitoId");
+                    b.HasIndex("AccidenteLocalizacionId")
+                        .IsUnique();
+
+                    b.HasIndex("AgenteIdId");
 
                     b.ToTable("Accidente");
                 });
@@ -117,14 +123,8 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("Ciudad")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Latitud")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("LocalizacionAccidenteId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Longitud")
                         .HasColumnType("nvarchar(max)");
@@ -133,9 +133,6 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("LocalizacionAccidenteId")
-                        .IsUnique();
 
                     b.ToTable("Localizacion");
                 });
@@ -232,25 +229,24 @@ namespace ViaParaTodos.App.Persistencia.Migrations
 
             modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Accidente", b =>
                 {
-                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.AgentesTransito", null)
-                        .WithMany("Accidente")
-                        .HasForeignKey("AgentesTransitoId");
-                });
-
-            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Localizacion", b =>
-                {
-                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Accidente", "Accidente")
-                        .WithOne("Localizacion")
-                        .HasForeignKey("ViaParaTodos.App.Dominio.Entidades.Localizacion", "LocalizacionAccidenteId")
+                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Localizacion", "Localizacion")
+                        .WithOne("Accidente")
+                        .HasForeignKey("ViaParaTodos.App.Dominio.Entidades.Accidente", "AccidenteLocalizacionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Accidente");
+                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.AgentesTransito", "AgenteId")
+                        .WithMany("Accidente")
+                        .HasForeignKey("AgenteIdId");
+
+                    b.Navigation("AgenteId");
+
+                    b.Navigation("Localizacion");
                 });
 
             modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.TablaVC", b =>
                 {
-                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Accidente", null)
+                    b.HasOne("ViaParaTodos.App.Dominio.Entidades.Accidente", "Accidente")
                         .WithMany("TablaVC")
                         .HasForeignKey("AccidenteId");
 
@@ -265,6 +261,8 @@ namespace ViaParaTodos.App.Persistencia.Migrations
                         .HasForeignKey("ViaParaTodos.App.Dominio.Entidades.TablaVC", "VehiculosTablaVCId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Accidente");
 
                     b.Navigation("Conductores");
 
@@ -282,14 +280,17 @@ namespace ViaParaTodos.App.Persistencia.Migrations
 
             modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Accidente", b =>
                 {
-                    b.Navigation("Localizacion");
-
                     b.Navigation("TablaVC");
 
                     b.Navigation("Vinculados");
                 });
 
             modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.AgentesTransito", b =>
+                {
+                    b.Navigation("Accidente");
+                });
+
+            modelBuilder.Entity("ViaParaTodos.App.Dominio.Entidades.Localizacion", b =>
                 {
                     b.Navigation("Accidente");
                 });
