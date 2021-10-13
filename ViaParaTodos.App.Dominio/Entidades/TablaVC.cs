@@ -5,10 +5,10 @@ namespace ViaParaTodos.App.Dominio.Entidades
     {
         public int Id {set;get;}
         public Vehiculos Vehiculos {set;get;}
-        public int VehiculosTablaVCId {set;get;}
-        public Conductores Conductores {set;get;}
-        public int ConductoresTablaVCId {set;get;}
-        public Accidente Accidente {set; get;}
-        public int AccidenteTablaVCId {set;get;}
+        public int VehiculosId {set;get;}
+        public Conductores Conductores  {set;get;}
+        public int ConductoresId  {set;get;}
+        public Accidente Accidente  {set; get;}
+        public int AccidenteId  {set; get;}
     }
 }

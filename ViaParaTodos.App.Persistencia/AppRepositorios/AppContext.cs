@@ -18,7 +18,7 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Localizacion>()
+            /*modelBuilder.Entity<Localizacion>()
                 .HasOne(a=>a.Accidente)
                 .WithOne(l=>l.Localizacion)
                 .HasForeignKey<Accidente>(a=>a.AccidenteLocalizacionId);
@@ -28,10 +28,15 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasForeignKey<TablaVC>(t=>t.VehiculosTablaVCId);
             modelBuilder.Entity<Conductores>()
-                .HasOne(t=>t.TablaVC)
+                .HasMany(t=>t.TablaVC)
                 .WithOne(c=>c.Conductores)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasForeignKey<TablaVC>(t=>t.ConductoresTablaVCId);
+            modelBuilder.Entity<Vinculados>()
+                .HasMany(t=>t.TablaVA)
+                .WithOne(v=>v.Vinculados)
+                .OnDelete(DeleteBehavior.Restrict)
+                .HasForeignKey<TablaVA>(t=>t.VinculadosId);*/
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {  

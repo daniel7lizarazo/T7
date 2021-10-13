@@ -52,9 +52,9 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
          var tablaVCEncontrado = _appContext.TablaVC.FirstOrDefault(t => t.Id == tablaVC.Id);
             if (tablaVCEncontrado!=null)
             {
-                tablaVCEncontrado.VehiculosTablaVCId=tablaVC.VehiculosTablaVCId;
-                tablaVCEncontrado.ConductoresTablaVCId=tablaVC.ConductoresTablaVCId;
-                tablaVCEncontrado.AccidenteTablaVCId=tablaVC.AccidenteTablaVCId;
+                tablaVCEncontrado.VehiculosId=tablaVC.VehiculosId;
+                tablaVCEncontrado.ConductoresId=tablaVC.ConductoresId;
+                tablaVCEncontrado.AccidenteId=tablaVC.AccidenteId;
                 _appContext.SaveChanges();
             }
             return tablaVCEncontrado;

@@ -1,4 +1,5 @@
 //using System.ComponentMode.DataAnnotations;
+using System.Collections.Generic;
 namespace ViaParaTodos.App.Dominio.Entidades
 {
     public class Localizacion
@@ -7,6 +8,6 @@ namespace ViaParaTodos.App.Dominio.Entidades
        public string Zona {set;get;}
        public string Latitud {set;get;}
        public string Longitud {set;get;}
-       public Accidente Accidente {set;get;}
+       public IEnumerable<Accidente> Accidente {set;get;}
     }
 }

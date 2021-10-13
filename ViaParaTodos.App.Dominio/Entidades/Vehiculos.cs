@@ -1,4 +1,5 @@
 //using System.ComponentMode.DataAnnotations;
+using System.Collections.Generic;
 namespace ViaParaTodos.App.Dominio.Entidades
 {
     public class Vehiculos
@@ -9,6 +10,6 @@ namespace ViaParaTodos.App.Dominio.Entidades
         public string Marca {set;get;}
         public string Linea {set;get;}
         public string Color {set;get;}
-        public TablaVC TablaVC {get;set;}
+        public IEnumerable<TablaVC> TablaVC {get;set;}
     }
 }
