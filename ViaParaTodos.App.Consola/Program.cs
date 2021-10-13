@@ -32,7 +32,13 @@ namespace ViaParaTodos.App.Consola
             //SearchConductorDocumento("963852714");
             //SearchVehiculo(1);
             //SearchAllConductores();
-            ReportarAccidente(new DateTime (2024,09,13),"Pretty nasty accident", "Nasty as hell", "C65L25", "Sur", "XXX-999", "2531246", "123456");
+
+            //Para que la función que reporta un accidente funcione debe llenar la información necesaria, esta se encuentra
+            //En la siguiente función, fecha, descripción, gravedad ... en la linea 41 está la función que estará llamando.
+            //Tenga en cuenta que el accidente se crea de cero pero se relaciona con datos ya existentes en la base
+            // es decir debe incluir datos de placa, documentos y zona, de elementos previamente creados.
+
+            //ReportarAccidente(new DateTime (2024,09,13),"Pretty nasty accident", "Nasty as hell", "C65L25", "Sur", "XXX-999", "2531246", "123456");
         }
 private static void ReportarAccidente(DateTime fecha, string descripcion, string gravedad, string agenteIdentificacion, string zona, string placa, string idconductor, string idvinculado)
 {
