@@ -23,7 +23,7 @@ namespace ViaParaTodos.App.Frontend.Pages
             this.repositorioVehiculos=repositorioVehiculos;
         }
 
-        public IActionResult OnPost(string placa)
+        public IActionResult OnPost()
         {
             //return new OkObjectResult(vehiculo);
             vehiculo=repositorioVehiculos.GetVehiculosByPlaca(placa);

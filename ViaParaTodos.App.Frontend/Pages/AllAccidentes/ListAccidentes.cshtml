@@ -1,0 +1,28 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.ListAccidentesModel  
+@{
+}
+<h1>Lista de Accidentes</h1>
+<table class="table">
+    <tr>
+    <th>Fecha</th>
+    <th>Descripción</th>
+    <th>Gravedad</th>
+    <th>Localización</th>
+  </tr>
+@foreach (var accidente in Model.ListaAccidentes)
+{
+    <tr>
+      <td>@accidente.Fecha</td>
+    <td>@accidente.Descripcion</td>
+    <td>@accidente.Gravedad</td>
+    <td>@accidente.LocalizacionId</td>
+     <td>
+      <a class="btn btn-primary table-btn" asp-page="/Agente/Agente-Acc" asp-route-idaccidente="@accidente.Id">
+      <i class="fas fa-info-circle"></i>
+      accidente
+      </a>
+       </td>
+    </tr>
+}
+</table>

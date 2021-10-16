@@ -31,6 +31,7 @@ namespace ViaParaTodos.App.Frontend
             services.AddDbContext<Persistencia.AppRepositorios.AppContext>();
             services.AddScoped<IRepositorioConductores, RepositorioConductores>();
             services.AddScoped<IRepositorioVehiculos, RepositorioVehiculos>();
+            services.AddScoped<IRepositorioAccidente, RepositorioAccidente>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

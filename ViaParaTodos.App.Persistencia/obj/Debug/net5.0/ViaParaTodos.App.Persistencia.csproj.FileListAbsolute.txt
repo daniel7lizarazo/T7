@@ -1,0 +1,17 @@
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\net5.0\ViaParaTodos.App.Persistencia.csproj.AssemblyReference.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\net5.0\ViaParaTodos.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\net5.0\ViaParaTodos.App.Persistencia.AssemblyInfoInputs.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\net5.0\ViaParaTodos.App.Persistencia.AssemblyInfo.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\net5.0\ViaParaTodos.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\net5.0\ViaParaTodos.App.Persistencia.deps.json
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\net5.0\ViaParaTodos.App.Persistencia.runtimeconfig.json
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\net5.0\ViaParaTodos.App.Persistencia.runtimeconfig.dev.json
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\net5.0\ViaParaTodos.App.Persistencia.dll
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\net5.0\ref\ViaParaTodos.App.Persistencia.dll
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\net5.0\ViaParaTodos.App.Persistencia.pdb
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\net5.0\ViaParaTodos.App.Dominio.dll
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\bin\Debug\net5.0\ViaParaTodos.App.Dominio.pdb
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\net5.0\ViaParaTodos.App.Persistencia.dll
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\net5.0\ref\ViaParaTodos.App.Persistencia.dll
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\net5.0\ViaParaTodos.App.Persistencia.pdb
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Persistencia\obj\Debug\net5.0\ViaParaTodos.App.Persistencia.genruntimeconfig.cache

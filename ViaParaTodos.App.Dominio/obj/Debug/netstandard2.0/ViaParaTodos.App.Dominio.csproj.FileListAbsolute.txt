@@ -1,4 +1,3 @@
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\obj\Debug\netstandard2.0\ViaParaTodos.App.Dominio.csprojAssemblyReference.cache
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\obj\Debug\netstandard2.0\ViaParaTodos.App.Dominio.AssemblyInfoInputs.cache
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\obj\Debug\netstandard2.0\ViaParaTodos.App.Dominio.AssemblyInfo.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\obj\Debug\netstandard2.0\ViaParaTodos.App.Dominio.csproj.CoreCompileInputs.cache
@@ -7,3 +6,5 @@ C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\bin\Debug\netstandard2
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\bin\Debug\netstandard2.0\ViaParaTodos.App.Dominio.pdb
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\obj\Debug\netstandard2.0\ViaParaTodos.App.Dominio.dll
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\obj\Debug\netstandard2.0\ViaParaTodos.App.Dominio.pdb
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\obj\Debug\netstandard2.0\ViaParaTodos.App.Dominio.csproj.AssemblyReference.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Dominio\obj\Debug\netstandard2.0\ViaParaTodos.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
