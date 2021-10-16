@@ -20,13 +20,16 @@ namespace ViaParaTodos.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World! From Console Entity Framework Core");
+
             //AddVehiculo();
+            //AddVinculados();
             //AddConductor();
             //AddAgentesTransito();
+            //AddLocalizacion(); 
             //AddAccidente();
             //AddTablaVC();
-            //AddVinculados();
-            //AddLocalizacion();
+            //AddTablaVA();
+
             //UpdateConductor();
             //SearchConductor(1);
             //SearchConductorDocumento("963852714");
@@ -40,35 +43,35 @@ namespace ViaParaTodos.App.Consola
             //Tenga en cuenta que el accidente se crea de cero pero se relaciona con datos ya existentes en la base
             // es decir debe incluir datos de placa, documentos y zona, de elementos previamente creados.
 
-            //ReportarAccidente(new DateTime (2024,09,13),"Pretty nasty accident", "Nasty as hell", "C65L25", "Sur", "XXX-999", "2531246", "123456");
+            ReportarAccidente(new DateTime (2021,09,13),"Hubo muchos muertos", "Terrible", "B4S58", "Norte", "TTT-111", "5302456", "456123");
         }
-private static void ReportarAccidente(DateTime fecha, string descripcion, string gravedad, string agenteIdentificacion, string zona, string placa, string idconductor, string idvinculado)
-{
-    Accidente accidente= new Accidente
-    {
-        Fecha = fecha,
-        Descripcion = descripcion,
-        Gravedad = gravedad,
-        LocalizacionId = _repoLocalizacion.GetLocalizacionByZona(zona).Id,
-        AgentesTransitoId = _repoAgentesTransito.GetAgentesTransitoByIdentificacion(agenteIdentificacion).Id
-    };
-    Accidente accidenteagregado = _repoAccidente.AddAccidente(accidente);
+            private static void ReportarAccidente(DateTime fecha, string descripcion, string gravedad, string agenteIdentificacion, string zona, string placa, string idconductor, string idvinculado)
+            {
+                Accidente accidente= new Accidente
+                {
+                    Fecha = fecha,
+                    Descripcion = descripcion,
+                    Gravedad = gravedad,
+                    LocalizacionId = _repoLocalizacion.GetLocalizacionByZona(zona).Id,
+                    AgentesTransitoId = _repoAgentesTransito.GetAgentesTransitoByIdentificacion(agenteIdentificacion).Id
+                };
+                Accidente accidenteagregado = _repoAccidente.AddAccidente(accidente);
 
-    TablaVC tablavc = new TablaVC
-    {
-        VehiculosId = _repoVehiculos.GetVehiculosByPlaca(placa).Id,
-        ConductoresId = _repoConductores.GetConductorByDocumento(idconductor).Id,
-        AccidenteId = accidenteagregado.Id
-    };
-    _repoTablaVC.AddTablaVC(tablavc);
+                TablaVC tablavc = new TablaVC
+                {
+                    VehiculosId = _repoVehiculos.GetVehiculosByPlaca(placa).Id,
+                    ConductoresId = _repoConductores.GetConductorByDocumento(idconductor).Id,
+                    AccidenteId = accidenteagregado.Id
+                };
+                _repoTablaVC.AddTablaVC(tablavc);
 
-    TablaVA tablava = new TablaVA
-    {
-        VinculadosId = _repoVinculados.GetVinculadosByDocumento(idvinculado).Id,
-        AccidenteId = accidenteagregado.Id
-    };
-    _repoTablaVA.AddTablaVA(tablava);
-}
+                TablaVA tablava = new TablaVA
+                {
+                    VinculadosId = _repoVinculados.GetVinculadosByDocumento(idvinculado).Id,
+                    AccidenteId = accidenteagregado.Id
+                };
+                _repoTablaVA.AddTablaVA(tablava);
+            }
 
 
 
@@ -77,13 +80,13 @@ private static void ReportarAccidente(DateTime fecha, string descripcion, string
         {
             Conductores conductor = new Conductores
             {
-                Nombres="Paco",
-                Apellidos="Cheveroni",
+                Nombres="Perri",
+                Apellidos="Ornitorrinco",
                 TipoDoc="CE",
-                NumeroDoc="457895",
-                VigenciaLicencia=new DateTime (2024,09,13),
-                Direccion="Cl 2 N 1-17 Sur",
-                NumeroTelefono="578963"
+                NumeroDoc="007",
+                VigenciaLicencia=new DateTime (2034,09,13),
+                Direccion="Cl 0 N 0-07 Sur",
+                NumeroTelefono="070707"
             };
             _repoConductores.AddConductor(conductor);
         }
@@ -130,11 +133,11 @@ private static void ReportarAccidente(DateTime fecha, string descripcion, string
         {
             Vehiculos vehiculo = new Vehiculos
             {
-                Placa="KKK999",
+                Placa="OOO-777",
                 Modelo=2019,
                 Marca="Renoult",
-                Linea="Sandero",
-                Color="Azul asteroide"
+                Linea="Clio",
+                Color="Magenta"
             };
             _repoVehiculos.AddVehiculos(vehiculo);
         } 
@@ -149,9 +152,9 @@ private static void ReportarAccidente(DateTime fecha, string descripcion, string
         {
             AgentesTransito agenteTransito = new AgentesTransito
             {
-                Usuario="El papucho",
-                Contrasena="elaccidentado69",
-                Identificacion="00110011",
+                Usuario="Francisco",
+                Contrasena="Elfranci",
+                Identificacion="C98JK",
                 Rango="Generalisimo",
             };
             _repoAgentesTransito.AddAgentesTransito(agenteTransito);
@@ -186,12 +189,12 @@ private static void ReportarAccidente(DateTime fecha, string descripcion, string
         {
             Vinculados vinculado = new Vinculados
             {
-                Nombres="Alexander",
-                Apellidos="Vargas",
+                Nombres="Pepito",
+                Apellidos="Perez",
                 TipoDoc="CC",
-                NumeroDoc="456123",
-                Direccion="Cr 33 #9-75",
-                NumeroTelefono="888888888",
+                NumeroDoc="000000",
+                Direccion="Cr 0 #9-75",
+                NumeroTelefono="01010101",
                 Testigo=false,
                 Afectado=true,
             };

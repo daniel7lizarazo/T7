@@ -164,3 +164,4 @@ C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.dll
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.pdb
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\ViaParaTodos.App.Frontend.genruntimeconfig.cache
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Vehiculos\CRUD-Vehiculos.cshtml.g.cs
