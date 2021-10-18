@@ -13,15 +13,18 @@ namespace ViaParaTodos.App.Frontend.Pages
     {
         private readonly IRepositorioAccidente repositorioAccidente;
 
+        private readonly IRepositorioTablaVC repositorioTablaVC;
+
         public IEnumerable<TablaVC> listTablaVC {set;get;}
 
         public IEnumerable<Accidente> accidente_localizacion_agente {set;get;}
 
         public int accidenteId {set;get;}
 
-        public DeleteAccidenteModel(IRepositorioAccidente repositorioAccidente)
+        public DeleteAccidenteModel(IRepositorioAccidente repositorioAccidente, IRepositorioTablaVC repositorioTablaVC)
         {
             this.repositorioAccidente=repositorioAccidente;
+            this.repositorioTablaVC=repositorioTablaVC;
         }
 
         public void OnGet(int idaccidente)
@@ -36,7 +39,7 @@ namespace ViaParaTodos.App.Frontend.Pages
             listTablaVC = repositorioAccidente.GetTablaVCByAccidente(accidenteId); 
             foreach (TablaVC tabla in listTablaVC)
             {
-                repositorioAccidente.DeleteTablaVC(tabla.Id);
+                repositorioTablaVC.DeleteTablaVC(tabla.Id);
             }
 
             repositorioAccidente.DeleteAccidente(accidenteId);

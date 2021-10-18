@@ -22,15 +22,6 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             _appContext=appContext;
         }
 
-        void IRepositorioAccidente.DeleteTablaVC(int idTablaVC)
-        {
-            var tablaVCEncontrado = _appContext.TablaVC.FirstOrDefault(t => t.Id == idTablaVC);
-            if(tablaVCEncontrado==null)
-                return;
-            _appContext.TablaVC.Remove(tablaVCEncontrado);
-            _appContext.SaveChanges();
-        }
-
         IEnumerable<AgentesTransito> IRepositorioAccidente.GetAllAgentesTransitoAccidente()
         {
             return _appContext.AgentesTransito;

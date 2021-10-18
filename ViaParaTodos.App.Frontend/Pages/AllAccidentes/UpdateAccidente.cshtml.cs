@@ -64,13 +64,13 @@ namespace ViaParaTodos.App.Frontend.Pages
             {    
                 otras_localizaciones = repositorioAccidente.GetOtrasLocalizaciones(accidente_local.Localizacion.Id);
             }
-            return Page();
+            return Redirect("/AllAccidentes/UpdateAccidente?idaccidente="+accidente.Id);
         }
 
         public IActionResult OnPostEliminarVC(int tablaVCId, int accidenteId)
         {
-            repositorioAccidente.DeleteTablaVC(tablaVCId);
-
+            //accidenteId = accidenteId;
+            repositorioTablaVC.DeleteTablaVC(tablaVCId);
             listTablaVC = repositorioAccidente.GetTablaVCByAccidente(accidenteId); 
             accidente_localizacion_agente = repositorioAccidente.GetLocalizacionAgentesByAccidente(accidenteId);
             foreach (Accidente accidente_local in accidente_localizacion_agente)
@@ -78,7 +78,7 @@ namespace ViaParaTodos.App.Frontend.Pages
                 otras_localizaciones = repositorioAccidente.GetOtrasLocalizaciones(accidente_local.Localizacion.Id);
             }
 
-            return Page();
+            return Redirect("/AllAccidentes/UpdateAccidente?idaccidente="+accidenteId);
         }
 
         public IActionResult OnPostAgregarVC(int accidenteId)
@@ -87,7 +87,8 @@ namespace ViaParaTodos.App.Frontend.Pages
             vehiculo = repositorioTablaVC.GetVehiculosByPlaca(placa);
             tablavc = new TablaVC {AccidenteId=accidenteId, ConductoresId=conductor.Id, VehiculosId=vehiculo.Id};
             tablavc = repositorioTablaVC.AddTablaVC(tablavc); 
-        return Redirect("/AllAccidentes/UpdateAccidente?idaccidente="+accidenteId);
+            return Redirect("/AllAccidentes/UpdateAccidente?idaccidente="+tablavc.AccidenteId);
+            //return new OkObjectResult(tablavc.AccidenteId);
         }
     }
 }

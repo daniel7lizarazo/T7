@@ -75,12 +75,12 @@
 <h2>Agregue implicados</h2>
 <br>
 <form method="post" asp-page-handler="AgregarVC">
-  <input type="hidden" name="accidenteId" value="@Model.accidenteId"
+  <input type="hidden" name="accidenteId" value="@Model.accidente.Id">
 <table>
   <tr>
     <td>
       <label asp-for="numeroDoc">Numero de documento</label><br>
-      <input asp-for="numeroDoc" class="form-control" > 
+      <input asp-for="numeroDoc" class="form-control"> 
     </td>
     <td>
       <label asp-for="placa">Placa</label><br>

@@ -16,7 +16,6 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         IEnumerable<Localizacion> GetOtrasLocalizaciones(int localizacionId);
         IEnumerable<AgentesTransito> GetAllAgentesTransitoAccidente();
         IEnumerable<Localizacion> GetAllLocalizacioneAccidente();
-        void DeleteTablaVC(int idTablaVC);
     }
     
 }
