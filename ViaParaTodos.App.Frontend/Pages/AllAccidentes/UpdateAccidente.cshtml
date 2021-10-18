@@ -1,0 +1,94 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.UpdateAccidenteModel
+@{
+}
+<h1>Editar accidente</h1>
+
+<form method="post" asp-page-handler="Editar">
+  <label></label><br>
+	<input type="hidden" asp-for="accidente.Id" class="form-control"> 
+  <label></label><br>
+	<input type="hidden" asp-for="accidente.AgentesTransitoId" class="form-control"> 
+  <label asp-for="accidente.Descripcion">Descripción:</label><br>
+	<input asp-for="accidente.Descripcion" class="form-control" > 
+  <br><br>
+  <label asp-for="accidente.Gravedad">Gravedad:</label><br>
+	<input asp-for="accidente.Gravedad" class="form-control" > 
+  <br><br>
+  <label asp-for="accidente.Fecha">Fecha y hora:</label><br>
+	<input asp-for="accidente.Fecha" class="form-control">
+  <br><br>
+  <label asp-for="accidente.LocalizacionId">Localización:</label><br>
+	<select asp-for="accidente.LocalizacionId" class="form-control">
+
+    @foreach (var local in Model.accidente_localizacion_agente)
+    {
+        <option value="@local.Localizacion.Id" selected>@local.Localizacion.Zona</option>
+    }
+    @foreach (var otras in Model.otras_localizaciones)
+    {
+        <option value="@otras.Id">@otras.Zona</option>
+    }
+    </select>
+  <br><br>
+
+    @foreach (var agente in Model.accidente_localizacion_agente)
+    {
+        <label>Agente encargado</label><br>
+        <input value="@agente.AgentesTransito.Identificacion" readonly>
+    }
+  <br><br>
+
+		<button type="submit" class="btn btn-primary" >Editar</button>
+
+</form>
+
+<h2>Conductores y vehiculos involucrados</h2>
+
+<table class="table">
+    <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Documento</th>
+    <th>Placa</th>
+    <th>Linea</th>
+  </tr>
+@foreach (var tabla in Model.listTablaVC)
+{
+    <tr>
+    <td>@tabla.Conductores.Nombres</td>
+    <td>@tabla.Conductores.Apellidos</td>
+    <td>@tabla.Conductores.NumeroDoc</td>
+    <td>@tabla.Vehiculos.Placa</td>
+    <td>@tabla.Vehiculos.Linea</td>
+    <td>
+      <form method="post" asp-page-handler="EliminarVC">
+        <input type="hidden" name="tablaVCId" value="@tabla.Id">
+        <input type="hidden" name="accidenteId" value="@tabla.AccidenteId">
+        <button class="btn btn-primary">Eliminar</button>
+      </form>
+    </td>
+    </tr>
+}
+</table>
+<br><br>
+<h2>Agregue implicados</h2>
+<br>
+<form method="post" asp-page-handler="AgregarVC">
+  <input type="hidden" name="accidenteId" value="@Model.accidenteId"
+<table>
+  <tr>
+    <td>
+      <label asp-for="numeroDoc">Numero de documento</label><br>
+      <input asp-for="numeroDoc" class="form-control" > 
+    </td>
+    <td>
+      <label asp-for="placa">Placa</label><br>
+      <input asp-for="placa" class="form-control" > 
+    </td>
+    <td>
+      <button type="submit" class="btn btn-primary">Agregar</button>
+    </td>
+  </tr>
+</table>
+</form>

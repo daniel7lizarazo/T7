@@ -1,0 +1,46 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.ListVCModel
+@{
+}
+<h1>Información del accidente</h1>
+<table class="table">
+    <tr>
+    <th>Fecha</th>
+    <th>Descripción</th>
+    <th>Gravedad</th>
+    <th>Localización</th>
+    <th>Agente</th>
+  </tr>
+
+    <tr>
+    @foreach (var accidente in Model.accidente_localizacion_agente)
+    {
+    <td>@accidente.Fecha</td>
+    <td>@accidente.Descripcion</td>
+    <td>@accidente.Gravedad</td>
+    <td>@accidente.Localizacion.Zona</td>
+    <td>@accidente.AgentesTransito.Identificacion</td>
+    }
+    </tr>
+</table>
+ 
+<h2>Conductores y sus vehiculos implicados</h2>
+<table class="table">
+    <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Documento</th>
+    <th>Placa</th>
+    <th>Linea</th>
+  </tr>
+@foreach (var tabla in Model.listTablaVC)
+{
+    <tr>
+    <td>@tabla.Conductores.Nombres</td>
+    <td>@tabla.Conductores.Apellidos</td>
+    <td>@tabla.Conductores.NumeroDoc</td>
+    <td>@tabla.Vehiculos.Placa</td>
+    <td>@tabla.Vehiculos.Linea</td>
+    </tr>
+}
+</table>

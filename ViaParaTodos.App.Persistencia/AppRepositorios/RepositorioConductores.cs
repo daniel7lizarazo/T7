@@ -15,20 +15,24 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         /// Inyeccion de dependencias para indicar el contexto a utilizar
         /// </summary>
         /// <param name="appContext"></param>//
+        /// 
         public RepositorioConductores(AppContext appContext)
         {
             _appContext=appContext;
         }
+
         IEnumerable<Conductores> IRepositorioConductores.GetAllConductores()
         {
             return _appContext.Conductores;
         }
+
         Conductores IRepositorioConductores.AddConductor(Conductores conductor)
         {
            var conductorAdicionado= _appContext.Conductores.Add(conductor); 
            _appContext.SaveChanges();
            return conductorAdicionado.Entity;
         }
+
         Conductores IRepositorioConductores.UpdateConductor(Conductores conductor)
         {
         var ConductorEncontrado = _appContext.Conductores.FirstOrDefault(c => c.Id == conductor.Id);
@@ -45,6 +49,7 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             }
             return ConductorEncontrado;
         }
+
         void IRepositorioConductores.DeleteConductores(int idConductor)
         {
             var ConductorEncontrado = _appContext.Conductores.FirstOrDefault(c => c.Id == idConductor);
@@ -53,6 +58,7 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             _appContext.Conductores.Remove(ConductorEncontrado);
             _appContext.SaveChanges();
         }
+
         Conductores IRepositorioConductores.GetConductor(int idConductor)
         {
             return _appContext.Conductores.FirstOrDefault(c => c.Id == idConductor);
@@ -62,5 +68,6 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         {
             return _appContext.Conductores.FirstOrDefault(c => c.NumeroDoc == ConductorDocumento);
         }
+        
     }
 }

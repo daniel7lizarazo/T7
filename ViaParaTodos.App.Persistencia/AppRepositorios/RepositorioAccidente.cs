@@ -1,8 +1,11 @@
 using System.Linq;
 using System.Collections.Generic;
 using ViaParaTodos.App.Dominio.Entidades;
+using Microsoft.EntityFrameworkCore;
+
 namespace ViaParaTodos.App.Persistencia.AppRepositorios
 {
+    
     public class RepositorioAccidente : IRepositorioAccidente
     {
         /// <summary>
@@ -19,6 +22,39 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             _appContext=appContext;
         }
 
+        void IRepositorioAccidente.DeleteTablaVC(int idTablaVC)
+        {
+            var tablaVCEncontrado = _appContext.TablaVC.FirstOrDefault(t => t.Id == idTablaVC);
+            if(tablaVCEncontrado==null)
+                return;
+            _appContext.TablaVC.Remove(tablaVCEncontrado);
+            _appContext.SaveChanges();
+        }
+
+        IEnumerable<AgentesTransito> IRepositorioAccidente.GetAllAgentesTransitoAccidente()
+        {
+            return _appContext.AgentesTransito;
+        }
+
+        IEnumerable<Localizacion> IRepositorioAccidente.GetAllLocalizacioneAccidente()
+        {
+            return _appContext.Localizacion;
+        }
+
+        IEnumerable<Localizacion> IRepositorioAccidente.GetOtrasLocalizaciones(int localizacionId)
+        {
+            return _appContext.Localizacion.Where(l=>l.Id != localizacionId);
+        }
+
+        IEnumerable<Accidente> IRepositorioAccidente.GetLocalizacionAgentesByAccidente(int accidenteId)
+        {
+            return _appContext.Accidente.Where(a=>a.Id == accidenteId).Include(a=>a.Localizacion).Include(a=>a.AgentesTransito).ToList();
+        }
+
+        IEnumerable<TablaVC> IRepositorioAccidente.GetTablaVCByAccidente(int accidenteId)
+        {
+            return _appContext.TablaVC.Where(t=>t.AccidenteId==accidenteId).Include(t=>t.Vehiculos).Include(t=>t.Conductores).ToList();
+        }
 
         Accidente IRepositorioAccidente.AddAccidente(Accidente accidente)
         {

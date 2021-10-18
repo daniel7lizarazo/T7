@@ -150,7 +150,6 @@ C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razo
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\Vehiculos\CRUD-Vehiculos.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\ViaParaTodos.App.Frontend.RazorTargetAssemblyInfo.cache
@@ -164,3 +163,10 @@ C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\ViaP
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllAccidentes\ListAccidentes.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllVehiculos\detallesvehiculos.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllVehiculos\ListVehiculos.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllAccidentes\ListVC.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllAccidentes\UpdateAccidente.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllConductores\CRUDConductores.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllVehiculos\CRUDVehiculos.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllAccidentes\CreateAccidente.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllAccidentes\CreateTablaVC.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllAccidentes\DeleteAccidente.cshtml.g.cs

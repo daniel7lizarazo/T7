@@ -35,7 +35,7 @@ namespace ViaParaTodos.App.Consola
             //SearchConductorDocumento("963852714");
             //SearchVehiculo(1);
             //SearchAllConductores();
-
+            GetTablaVCByAccidente(13);
             //AddAgentesTransito();
 
             //Para que la función que reporta un accidente funcione debe llenar la información necesaria, esta se encuentra
@@ -43,8 +43,23 @@ namespace ViaParaTodos.App.Consola
             //Tenga en cuenta que el accidente se crea de cero pero se relaciona con datos ya existentes en la base
             // es decir debe incluir datos de placa, documentos y zona, de elementos previamente creados.
 
-            ReportarAccidente(new DateTime (2021,09,13),"Hubo muchos muertos", "Terrible", "B4S58", "Norte", "TTT-111", "5302456", "456123");
+            //ReportarAccidente(new DateTime (2021,09,13),"Hubo muchos muertos", "Terrible", "B4S58", "Norte", "TTT-111", "5302456", "456123");
+            /*string[] lista_uno = {"uno","dos","tres"};
+            string[] lista_dos = {"3","2","1"};
+            List<string[]> lista_total = new List<string[]> {lista_uno};
+            lista_total.Add(lista_dos);
+            Console.WriteLine("El primer item de la segunda lista es " + lista_total[1][0]);*/
         }
+
+            private static void GetTablaVCByAccidente(int accidente_id)
+            {
+                IEnumerable<TablaVC> listaTablaVC=_repoAccidente.GetTablaVCByAccidente(accidente_id);
+                foreach (var tabla in listaTablaVC)
+                {
+                   Console.WriteLine("El conductor: "+tabla.Conductores.Nombres+" en el carro con placas");
+                }
+            }
+        
             private static void ReportarAccidente(DateTime fecha, string descripcion, string gravedad, string agenteIdentificacion, string zona, string placa, string idconductor, string idvinculado)
             {
                 Accidente accidente= new Accidente
@@ -164,23 +179,24 @@ namespace ViaParaTodos.App.Consola
         {
             Accidente accidente = new Accidente
             {
-                Fecha=new DateTime(2021,05,05),
-                Descripcion="Pues se estrellaron pero no hubo nada de especial, una pierna partidita",
-                Gravedad="No tan grave you know",
-                AgentesTransitoId=1,
-                LocalizacionId=1
+                Fecha=new DateTime(2012,04,09),
+                Descripcion="Un desastre que implicó 16 personas, terrible",
+                Gravedad="Terrible",
+                AgentesTransitoId=2,
+                LocalizacionId=4
             };
             var accidenteAdded = _repoAccidente.AddAccidente(accidente);
             Console.WriteLine("ID:"+accidenteAdded.Id);
+            AddTablaVC(accidenteAdded.Id);
         } 
 
-        private static void AddTablaVC()
+        private static void AddTablaVC(int accidente_id)
         {
             TablaVC tablaVC = new TablaVC
             {
-                VehiculosId=1,
-                ConductoresId=1,
-                AccidenteId=1
+                VehiculosId=3,
+                ConductoresId=4,
+                AccidenteId=accidente_id
             };
             _repoTablaVC.AddTablaVC(tablaVC);
         } 

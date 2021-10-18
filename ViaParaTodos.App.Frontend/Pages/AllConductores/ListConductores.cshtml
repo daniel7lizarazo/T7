@@ -15,6 +15,12 @@
     <td>@conductor.Nombres</td>
     <td>@conductor.Apellidos</td>
     <td>@conductor.NumeroDoc</td>
+     <td>
+      <a class="btn btn-primary table-btn" asp-page="/AllConductores/CRUDConductores" asp-route-idconductor="@conductor.Id">
+      <i class="fas fa-info-circle"></i>
+      Vehiculo
+      </a>
+       </td>
     </tr>
 }
 </table>

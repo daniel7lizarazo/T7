@@ -18,6 +18,7 @@ namespace ViaParaTodos.App.Frontend.Pages
         {
             this.repositorioAccidente=repositorioAccidente;
         }
+        
         public void OnGet()
         {
             ListaAccidentes=repositorioAccidente.GetAllAccidente();

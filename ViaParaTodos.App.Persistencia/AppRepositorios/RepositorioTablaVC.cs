@@ -19,6 +19,16 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             _appContext=appContext;
         }
 
+        Vehiculos IRepositorioTablaVC.GetVehiculosByPlaca(string PlacaVehiculo)
+        {
+            return _appContext.Vehiculos.FirstOrDefault(v => v.Placa == PlacaVehiculo);
+        }
+
+        Conductores IRepositorioTablaVC.GetConductorByDocumento(string ConductorDocumento)
+        {
+            return _appContext.Conductores.FirstOrDefault(c => c.NumeroDoc == ConductorDocumento);
+        }
+
         TablaVC IRepositorioTablaVC.AddTablaVC(TablaVC tablaVC)
         {
             {

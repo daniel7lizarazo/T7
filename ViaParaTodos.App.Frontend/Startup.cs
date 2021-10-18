@@ -32,6 +32,7 @@ namespace ViaParaTodos.App.Frontend
             services.AddScoped<IRepositorioConductores, RepositorioConductores>();
             services.AddScoped<IRepositorioVehiculos, RepositorioVehiculos>();
             services.AddScoped<IRepositorioAccidente, RepositorioAccidente>();
+            services.AddScoped<IRepositorioTablaVC, RepositorioTablaVC>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

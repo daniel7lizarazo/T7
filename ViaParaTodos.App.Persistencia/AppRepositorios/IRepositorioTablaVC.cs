@@ -10,5 +10,7 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         TablaVC UpdateTablaVC(TablaVC tablaVC);
         void DeleteTablaVC (int idTablaVC);
         TablaVC GetTablaVC (int idTablaVC);
+        Conductores GetConductorByDocumento(string ConductorDocumento);
+        Vehiculos GetVehiculosByPlaca(string PlacaVehiculo);
     }
 }

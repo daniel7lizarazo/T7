@@ -1,0 +1,57 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.DeleteAccidenteModel
+@{
+}
+<h1>Eliminar Accidente</h1>
+<table class="table">
+    <tr>
+    <th>Fecha</th>
+    <th>Descripción</th>
+    <th>Gravedad</th>
+    <th>Localización</th>
+    <th>Agente</th>
+  </tr>
+
+    <tr>
+    @foreach (var accidente in Model.accidente_localizacion_agente)
+    {
+    <td>@accidente.Fecha</td>
+    <td>@accidente.Descripcion</td>
+    <td>@accidente.Gravedad</td>
+    <td>@accidente.Localizacion.Zona</td>
+    <td>@accidente.AgentesTransito.Identificacion</td>
+    }
+    </tr>
+</table>
+ 
+<h2>Conductores y vehiculos involucrados</h2>
+
+<table class="table">
+    <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Documento</th>
+    <th>Placa</th>
+    <th>Linea</th>
+  </tr>
+@foreach (var tabla in Model.listTablaVC)
+{
+    <tr>
+    <td>@tabla.Conductores.Nombres</td>
+    <td>@tabla.Conductores.Apellidos</td>
+    <td>@tabla.Conductores.NumeroDoc</td>
+    <td>@tabla.Vehiculos.Placa</td>
+    <td>@tabla.Vehiculos.Linea</td>
+    </tr>
+}
+</table>
+<h3>Si elimina este accidente también eliminará toda esta información, esta seguro que desea eliminarlo?</h3>
+<br><br>
+<form asp-page-handler="Eliminar" method="post">
+<input type="hidden" name="accidenteId" value="@Model.accidenteId">
+<button class="btn btn-primary">Eliminar</button>
+</form>
+<br><br>
+<form asp-page-handler="Cancelar" method="post">
+<button class="btn btn-primary">Cancelar</button>
+</form>

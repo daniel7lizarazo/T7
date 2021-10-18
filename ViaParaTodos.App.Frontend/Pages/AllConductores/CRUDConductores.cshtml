@@ -1,0 +1,149 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.CRUDConductoresModel
+@{
+}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js">
+
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+
+  </script>
+
+  <style>
+    .city {
+      background-color: tomato;
+      color: white;
+      border: 2px solid black;
+      margin: 20px;
+      padding: 50px;
+      width: 70%;
+      height: 100%;
+      position: relative;
+      display: block;
+    }
+
+    .responsive {
+      max-width: 100%;
+      position: relative;
+      display: block;
+      width: 50%;
+      height: auto;
+    }
+
+    .circle {
+      height: 300px;
+      width: 300px;
+      background-color: currentColor;
+      border-radius: 50%;
+    }
+
+    .boton-barras {
+      font-weight: bold;
+      border-radius: 50%;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      width: 70px;
+      height: 70px;
+      transition: all 0.5s;
+      cursor: pointer;
+
+    }
+
+    #grad1 {
+      height: auto;
+      background-color: red;
+      /* For browsers that do not support gradients */
+      background-image: linear-gradient(to left, black, #BD982D, #BDB42D, #FFC900, #FFEC00);
+    }
+  </style>
+</head>
+<div class="w3-row w3-border" style="max-width:75%;text-align: center;margin: auto;">
+
+  <div class="w3-container w3-half" style="background-color:#ffb229">
+    <img src="https://agente15.camilocasas.repl.co/Agente/Conductor4.png" align="center" class="image" width="auto"
+      height="130px" data-bs-toggle="collapse" data-bs-target="#demo">
+    <h1>CONDUCTOR</h1>
+    <p>Consulte, diligencie, actualice o elimine el conductor.</p>
+    <div>
+      <center><button type="button" class="boton-barras" style="background-color:yellowgreen" data-bs-toggle="collapse"
+          data-bs-target="#demo">+</button></center>
+    </div>
+    <div id="demo" class="collapse"><br>
+      <center>
+        <H1>DATOS DEL CONDUCTOR</H1>
+
+
+        <form method="post" class=was-validated>
+          <input type="hidden" asp-for="conductor.Id">
+          <label for="fname">Identificación:</label><br>
+          <input asp-for="conductor.NumeroDoc" type="text" class="form-control is-invalid"
+            style="width: 60%; display: -webkit-inline-box" id="validationServer02" required>
+          <button type="button" class="btn btn-primary" onclick="alert('Buscando el Conductor......')">Buscar</button>
+          <br><br>
+          <label for="Tid">Tipo de documento:</label>
+          <br>
+          <select class="form-select was-validated" asp-for="conductor.TipoDoc" style="width: 60%" ;
+            aria-label="Default select example" required>
+            <option selected disabled value="">Seleccione</option>
+            <option value="CC">CC</option>
+            <option value="TI">TI</option>
+            <option value="CE">CE</option>
+          </select>
+          <br><br>
+          <label for="lname">Nombre:</label><br>
+          <input asp-for="conductor.Nombres" type="text" class="form-control is-invalid" style="width: 70%" ;
+            id="validationServer02" required placeholder="Digite aquí el Nombre">
+          <br><br>
+          <label for="lname">Apellidos:</label><br>
+          <input asp-for="conductor.Apellidos" type="text" class="form-control is-invalid" style="width: 70%" ;
+            id="validationServer02" required placeholder="Digite aquí el Apellido"><br><br>
+          <label for="lname">Teléfono:</label><br>
+          <input asp-for="conductor.NumeroTelefono" type="text" class="form-control is-invalid" style="width: 70%" ;
+            id="validationServer02" required placeholder="Digite aquí el Teléfono"><br><br>
+          <label for="lname">Dirección:</label><br>
+          <input asp-for="conductor.Direccion" type="text" class="form-control is-invalid" style="width: 70%" ;
+            id="validationServer02" required placeholder="Digite aquí la Dirección">
+          <br><br>
+          <label for="Genero">Género:</label>
+          <br>
+          @* <select class="form-select was-validated" style="width: 60%" ; aria-label="Default select example" required>
+            <option selected disabled value="">Seleccione</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femino">Femenino</option>
+            <option value="Trans">Trans</option>
+          </select>
+          <br><br>
+          <label for="lname">Fecha de nacimiento:</label><br>
+          <input type="date" id="lname" name="lname" value="" required> *@
+
+          
+          <input type="image" src="https://agente15.camilocasas.repl.co/Icon/AddC.png" alt="Submit" width="48" height="48">
+
+          <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Update-User.png" alt="Submit" width="50"
+            height="50" onclick="alert('CONDUCTOR ACTUALIZADO......')">
+
+          <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Rev-User.png" alt="Submit" width="48" height="48"
+            onclick="alert('CONDUCTOR ELIMINADO......')">
+          <br>
+        </form>
+      </center>
+    </div>
+  </div>
+</div>
+

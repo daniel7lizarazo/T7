@@ -1,0 +1,20 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.CreateTablaVCModel
+@{
+}
+<h1>Agrege los implicados</h1>
+<form method="post">
+    <label asp-for="numeroDoc">Numero de documento del conductor:</label><br>
+    <input asp-for="numeroDoc" class="form-control" > 
+  <br><br>
+    <label asp-for="placa">Placa del vehiculo</label><br>
+    <input asp-for="placa" class="form-control" > 
+  <br><br>
+    <button type="submit" class="btn btn-primary">Agregar</button>
+</form>
+  <br><br>
+  <br><br>
+  <a class="btn btn-primary table-btn" asp-page="/AllAccidentes/UpdateAccidente" asp-route-idaccidente="@Model.accidenteId">
+  <i class="fas fa-info-circle"></i>
+  Finalizar
+  </a>
