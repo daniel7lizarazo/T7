@@ -3,6 +3,11 @@
 @{
 }
 <h1>Lista de conductores</h1>
+  <a class="btn btn-primary table-btn" asp-page="/AllConductores/CreateConductores"> 
+  <i class="fas fa-info-circle"></i>
+  Crear
+  </a>
+
 <table class="table">
     <tr>
     <th>Nombre</th>
@@ -15,12 +20,25 @@
     <td>@conductor.Nombres</td>
     <td>@conductor.Apellidos</td>
     <td>@conductor.NumeroDoc</td>
-     <td>
-      <a class="btn btn-primary table-btn" asp-page="/AllConductores/CRUDConductores" asp-route-idconductor="@conductor.Id">
+    <td>
+      <a class="btn btn-primary table-btn" asp-page="/AllConductores/DetailsConductores" asp-route-idconductor="@conductor.Id">
       <i class="fas fa-info-circle"></i>
-      Vehiculo
+      Detalles
       </a>
-       </td>
+    </td>
+    <td>
+      <a class="btn btn-primary table-btn" asp-page="/AllConductores/EditConductores" asp-route-idconductor="@conductor.Id">
+      <i class="fas fa-info-circle"></i>
+      Editar
+      </a>
+    </td>
+    <td>
+      <a class="btn btn-primary table-btn" asp-page="/AllConductores/EliminarConductores" asp-route-idconductor="@conductor.Id">
+      <i class="fas fa-info-circle"></i>
+      Eliminar
+      </a>
+    </td>
+
     </tr>
 }
 </table>

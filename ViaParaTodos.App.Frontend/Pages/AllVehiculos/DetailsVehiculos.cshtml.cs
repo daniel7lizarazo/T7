@@ -9,21 +9,18 @@ using ViaParaTodos.App.Persistencia.AppRepositorios;
 
 namespace ViaParaTodos.App.Frontend.Pages
 {
-    public class detallesvehiculosModel : PageModel
+    public class DetailsVehiculosModel : PageModel
 {
         private readonly IRepositorioVehiculos repositorioVehiculos;
-        
 
         public Vehiculos vehiculo {get;set;}
         
-        public detallesvehiculosModel(IRepositorioVehiculos repositorioVehiculos)
+        public DetailsVehiculosModel(IRepositorioVehiculos repositorioVehiculos)
          {
              
              this.repositorioVehiculos=repositorioVehiculos;
          }
 
-
-      
         public IActionResult OnGet(int idVehiculo)
         {
      

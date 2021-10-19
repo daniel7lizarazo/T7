@@ -1,5 +1,5 @@
 ﻿@page
-@model ViaParaTodos.App.Frontend.Pages.CRUDVehiculosModel
+@model ViaParaTodos.App.Frontend.Pages.EditVehiculosModel
 @{
 }
 <head>
@@ -93,33 +93,26 @@
             id="validationServer02" required placeholder="Digite aquí la Placa">
           <button type="button" class="btn btn-primary" onclick="alert('Buscando el Vehículo......')">Buscar</button>
           <br><br>
+
           <label for="lname">Modelo:</label><br>
           <input asp-for="vehiculo.Modelo" type="number" class="form-control is-invalid" style="width: 70%" ;
             id="validationServer02" required placeholder="Digite aquí el Modelo">
           <br><br>
+
           <label for="lname">Marca:</label><br>
           <input asp-for="vehiculo.Marca" type="text" class="form-control is-invalid" style="width: 70%" ;
             id="validationServer02" required placeholder="Digite aquí la Marca">
           <br><br>
+
           <label for="lname">Línea:</label><br>
           <input asp-for="vehiculo.Linea" type="text" class="form-control is-invalid" style="width: 70%" ;
-            id="validationServer02" required placeholder="Digite aquí la línea"><br><br>
+            id="validationServer02" required placeholder="Digite aquí la línea">
+          <br><br>
           <label for="lname">Color:</label><br>
           <input asp-for="vehiculo.Color" type="text" class="form-control is-invalid" style="width: 70%" ;
-            id="validationServer02" required placeholder="Digite aquí el Color"><br><br>
-            @*<label for="lname">Tipo:</label><br>
-              <input type="text" class="form-control is-invalid" style="width: 70%" ; id="validationServer02" required
-              placeholder="Digite aquí el Tipo">
-              <br><br>
-              <label for="Cservicio">Clase de servicio:</label><br>
-              <select class="form-select was-validated" style="width: 60%; display: -webkit-inline-box"
-              aria-label="Default select example" required>
-              <option selected disabled value="">Seleccione</option>
-              <option value="Privado">Privado</option>
-              <option value="Público">Público</option>
-              </select>
-              <br><br><br> *@
-
+            id="validationServer02" required placeholder="Digite aquí el Color">
+            <br><br>
+            
           <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Car-Add.png" alt="Submit" width="48"
             height="48">
 

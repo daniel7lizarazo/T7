@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using ViaParaTodos.App.Dominio.Entidades;
+using Microsoft.EntityFrameworkCore;
 namespace ViaParaTodos.App.Persistencia.AppRepositorios
 {
     public class RepositorioTablaVC : IRepositorioTablaVC
@@ -17,6 +18,16 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         public RepositorioTablaVC(AppContext appContext)
         {
             _appContext=appContext;
+        }
+
+        IEnumerable<TablaVC> IRepositorioTablaVC.GetAccidentesConductoresByVehiculo(int vehiculoId)
+        {
+            return _appContext.TablaVC.Where(t=>t.VehiculosId==vehiculoId).Include(t=>t.Accidente).Include(t=>t.Conductores);
+        }
+        
+        IEnumerable<TablaVC> IRepositorioTablaVC.GetAccidentesVehiculosByConductor(int conductorId)
+        {
+            return _appContext.TablaVC.Where(t=>t.ConductoresId==conductorId).Include(t=>t.Accidente).Include(t=>t.Vehiculos);
         }
 
         Vehiculos IRepositorioTablaVC.GetVehiculosByPlaca(string PlacaVehiculo)

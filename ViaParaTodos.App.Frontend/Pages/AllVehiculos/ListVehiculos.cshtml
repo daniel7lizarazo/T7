@@ -3,6 +3,12 @@
 @{
 }
 <h1>Lista de vehiculos</h1>
+  <a class="btn btn-primary table-btn" asp-page="/AllVehiculos/CreateVehiculos"> 
+  <i class="fas fa-info-circle"></i>
+  Crear
+  </a>
+
+
 <table class="table">
     <tr>
       <th>Id</th>
@@ -18,9 +24,21 @@
     <td>@vehiculo.Modelo</td>
     <td>@vehiculo.Marca</td>
      <td>
-      <a class="btn btn-primary table-btn" asp-page="/AllVehiculos/CRUDVehiculos" asp-route-placa="@vehiculo.Placa">
+      <a class="btn btn-primary table-btn" asp-page="/AllVehiculos/DetailsVehiculos" asp-route-idVehiculo="@vehiculo.Id">
       <i class="fas fa-info-circle"></i>
-      Vehiculo
+      Detalles
+      </a>
+       </td>
+     <td>
+      <a class="btn btn-primary table-btn" asp-page="/AllVehiculos/EditVehiculos" asp-route-idVehiculo="@vehiculo.Id">
+      <i class="fas fa-info-circle"></i>
+      Editar
+      </a>
+       </td>
+     <td>
+      <a class="btn btn-primary table-btn" asp-page="/AllVehiculos/EliminarVehiculos" asp-route-idVehiculo="@vehiculo.Id">
+      <i class="fas fa-info-circle"></i>
+      Eliminar
       </a>
        </td>
     </tr>

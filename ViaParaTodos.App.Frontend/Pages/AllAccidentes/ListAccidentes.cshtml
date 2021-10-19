@@ -12,7 +12,6 @@
     <th>Fecha</th>
     <th>Descripción</th>
     <th>Gravedad</th>
-    <th>Localización</th>
   </tr>
 @foreach (var accidente in Model.ListaAccidentes)
 {
@@ -20,7 +19,6 @@
       <td>@accidente.Fecha</td>
     <td>@accidente.Descripcion</td>
     <td>@accidente.Gravedad</td>
-    <td>@accidente.LocalizacionId</td>
       
     <td>
       <a class="btn btn-primary table-btn" asp-page="/AllAccidentes/ListVC" asp-route-idaccidente="@accidente.Id">

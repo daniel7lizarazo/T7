@@ -9,23 +9,17 @@ using ViaParaTodos.App.Persistencia.AppRepositorios;
 
 namespace ViaParaTodos.App.Frontend.Pages
 {
-        //public class Agente_AccModel : PageModel
-    //{
-      //  public void OnGet()
-        //{
-        //}
-    //}
 
-
-    public class CRUDVehiculosModel : PageModel
+    public class EditVehiculosModel : PageModel
     {
 
         private readonly IRepositorioConductores repositorioConductores;
         private readonly IRepositorioVehiculos repositorioVehiculos;
+
         [BindProperty]
         public Vehiculos vehiculo {get;set;}
         
-        public CRUDVehiculosModel(IRepositorioVehiculos repositorioVehiculos, IRepositorioConductores repositorioConductores)
+        public EditVehiculosModel(IRepositorioVehiculos repositorioVehiculos, IRepositorioConductores repositorioConductores)
         {
              
             this.repositorioVehiculos=repositorioVehiculos;
@@ -33,10 +27,10 @@ namespace ViaParaTodos.App.Frontend.Pages
 
 
       
-        public IActionResult OnGet(string placa)
+        public IActionResult OnGet(int idVehiculo)
         {
      
-            vehiculo=repositorioVehiculos.GetVehiculosByPlaca(placa);
+            vehiculo=repositorioVehiculos.GetVehiculos(idVehiculo);
             if (vehiculo==null)
             {
                 return RedirectToPage("./NotFound");

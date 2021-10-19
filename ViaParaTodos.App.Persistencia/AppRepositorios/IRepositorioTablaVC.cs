@@ -12,5 +12,7 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         TablaVC GetTablaVC (int idTablaVC);
         Conductores GetConductorByDocumento(string ConductorDocumento);
         Vehiculos GetVehiculosByPlaca(string PlacaVehiculo);
+        IEnumerable<TablaVC> GetAccidentesVehiculosByConductor(int conductorId);
+        IEnumerable<TablaVC> GetAccidentesConductoresByVehiculo(int vehiculoId);
     }
 }

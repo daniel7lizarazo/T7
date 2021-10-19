@@ -1,0 +1,23 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.DetailsConductoresModel
+@{
+}
+<h1>Información del conductor</h1>
+<table class="table">
+    <tr>
+    <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Documento</th>
+    <th>Teléfono</th>
+    <th>Dirección</th>
+  </tr>
+
+    <tr>
+    <td>@Model.conductor.Nombres</td>
+    <td>@Model.conductor.Apellidos</td>
+    <td>@Model.conductor.NumeroDoc</td>
+    <td>@Model.conductor.NumeroTelefono</td>
+    <td>@Model.conductor.Direccion</td>
+    </tr>
+</table>
+ 

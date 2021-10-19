@@ -1,5 +1,5 @@
 ﻿@page
-@model ViaParaTodos.App.Frontend.Pages.CRUDConductoresModel
+@model ViaParaTodos.App.Frontend.Pages.EditConductoresModel
 @{
 }
 
@@ -88,16 +88,15 @@
       <center>
         <H1>DATOS DEL CONDUCTOR</H1>
 
-
         <form method="post" class=was-validated>
+
           <input type="hidden" asp-for="conductor.Id">
-          <label for="fname">Identificación:</label><br>
-          <input asp-for="conductor.NumeroDoc" type="text" class="form-control is-invalid"
+
+          <label asp-for="conductor.NumeroDoc">Identificación:</label><br>
+          <input asp-for="conductor.NumeroDoc" class="form-control is-invalid"
             style="width: 60%; display: -webkit-inline-box" id="validationServer02" required>
-          <button type="button" class="btn btn-primary" onclick="alert('Buscando el Conductor......')">Buscar</button>
           <br><br>
-          <label for="Tid">Tipo de documento:</label>
-          <br>
+          <label asp-for="conductor.TipoDoc">Tipo de documento:</label><br>
           <select class="form-select was-validated" asp-for="conductor.TipoDoc" style="width: 60%" ;
             aria-label="Default select example" required>
             <option selected disabled value="">Seleccione</option>
@@ -106,40 +105,32 @@
             <option value="CE">CE</option>
           </select>
           <br><br>
-          <label for="lname">Nombre:</label><br>
+
+          <label asp-for="conductor.Nombres">Nombre:</label><br>
           <input asp-for="conductor.Nombres" type="text" class="form-control is-invalid" style="width: 70%" ;
             id="validationServer02" required placeholder="Digite aquí el Nombre">
           <br><br>
-          <label for="lname">Apellidos:</label><br>
+
+          <label asp-for="conductor.Apellidos">Apellidos:</label><br>
           <input asp-for="conductor.Apellidos" type="text" class="form-control is-invalid" style="width: 70%" ;
             id="validationServer02" required placeholder="Digite aquí el Apellido"><br><br>
+
           <label for="lname">Teléfono:</label><br>
           <input asp-for="conductor.NumeroTelefono" type="text" class="form-control is-invalid" style="width: 70%" ;
-            id="validationServer02" required placeholder="Digite aquí el Teléfono"><br><br>
-          <label for="lname">Dirección:</label><br>
+            id="validationServer02" required placeholder="Digite aquí el Teléfono">
+            <br><br>
+
+          <label asp-for="conductor.Direccion">Dirección:</label><br>
           <input asp-for="conductor.Direccion" type="text" class="form-control is-invalid" style="width: 70%" ;
             id="validationServer02" required placeholder="Digite aquí la Dirección">
           <br><br>
-          <label for="Genero">Género:</label>
-          <br>
-          @* <select class="form-select was-validated" style="width: 60%" ; aria-label="Default select example" required>
-            <option selected disabled value="">Seleccione</option>
-            <option value="Masculino">Masculino</option>
-            <option value="Femino">Femenino</option>
-            <option value="Trans">Trans</option>
-          </select>
-          <br><br>
-          <label for="lname">Fecha de nacimiento:</label><br>
-          <input type="date" id="lname" name="lname" value="" required> *@
 
-          
-          <input type="image" src="https://agente15.camilocasas.repl.co/Icon/AddC.png" alt="Submit" width="48" height="48">
+          <label asp-for="conductor.VigenciaLicencia">Fecha de vigencia de la licencia:</label><br>
+          <input asp-for="conductor.VigenciaLicencia" required>
+          <br><br>
 
           <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Update-User.png" alt="Submit" width="50"
             height="50" onclick="alert('CONDUCTOR ACTUALIZADO......')">
-
-          <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Rev-User.png" alt="Submit" width="48" height="48"
-            onclick="alert('CONDUCTOR ELIMINADO......')">
           <br>
         </form>
       </center>

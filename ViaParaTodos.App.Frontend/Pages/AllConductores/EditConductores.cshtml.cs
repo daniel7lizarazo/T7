@@ -9,15 +9,7 @@ using ViaParaTodos.App.Persistencia.AppRepositorios;
 
 namespace ViaParaTodos.App.Frontend.Pages
 {
-        //public class Agente_AccModel : PageModel
-    //{
-      //  public void OnGet()
-        //{
-        //}
-    //}
-
-
-    public class CRUDConductoresModel : PageModel
+    public class EditConductoresModel : PageModel
     {
 
         private readonly IRepositorioConductores repositorioConductores;
@@ -25,17 +17,13 @@ namespace ViaParaTodos.App.Frontend.Pages
         [BindProperty]
         public Conductores conductor {get;set;}
         
-        public CRUDConductoresModel(IRepositorioConductores repositorioConductores)
+        public EditConductoresModel(IRepositorioConductores repositorioConductores)
         {
-             
             this.repositorioConductores=repositorioConductores;
         }
-
-
       
         public IActionResult OnGet(int idConductor)
         {
-     
             conductor=repositorioConductores.GetConductor(idConductor);
             if (conductor==null)
             {
@@ -43,20 +31,13 @@ namespace ViaParaTodos.App.Frontend.Pages
             }
             else 
             return Page();
-            
         }
 
-        
         public IActionResult OnPost()
         {
-     
             conductor=repositorioConductores.UpdateConductor(conductor);
             return Page();
-            
         }
-
-
-
     }
 
     

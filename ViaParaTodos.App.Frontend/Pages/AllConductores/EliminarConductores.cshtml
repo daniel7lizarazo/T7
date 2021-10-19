@@ -1,0 +1,56 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.EliminarConductoresModel
+@{
+}
+<h1>Eliminar Conductor</h1>
+
+<table class="table">
+    <tr>
+    <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Documento</th>
+    <th>Teléfono</th>
+    <th>Dirección</th>
+    </tr>
+    <tr>
+    <td>@Model.conductor.Nombres</td>
+    <td>@Model.conductor.Apellidos</td>
+    <td>@Model.conductor.NumeroDoc</td>
+    <td>@Model.conductor.NumeroTelefono</td>
+    <td>@Model.conductor.Direccion</td>
+    </tr>
+</table>
+ 
+<h2>Accidentes en los que se ha visto involucrado</h2>
+<table class="table">
+    <tr>
+    <th>Fecha</th>
+    <th>Descripción</th>
+    <th>Gravedaddad</th>
+    <th>Placa</th>
+    <th>Linea</th>
+  </tr>
+@foreach (var tabla in Model.tablavc)
+{
+    <tr>
+    <td>@tabla.Accidente.Fecha</td>
+    <td>@tabla.Accidente.Descripcion</td>
+    <td>@tabla.Accidente.Gravedad</td>
+    <td>@tabla.Vehiculos.Placa</td>
+    <td>@tabla.Vehiculos.Linea</td>
+    </tr>
+}
+</table>
+<h3>Si elimina la información de este conductor también lo eliminará de los reportes de estos accidentes. ¿Desea continuar con la eliminación?</h3>
+<br>
+<form method="post" asp-page-handler="Eliminar">
+    <input type="hidden" name="idconductor" value="@Model.conductor.Id">
+    <label>Eliminar</label>
+    <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Rev-User.png" alt="Submit" width="48" height="48">
+</form>
+    <td>
+      <a class="btn btn-primary table-btn" asp-page="/AllConductores/ListConductores"> 
+      <i class="fas fa-info-circle"></i>
+      Cancelar
+      </a>
+    </td>

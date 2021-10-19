@@ -1,0 +1,22 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.DetailsVehiculosModel
+@{
+}
+<h1>Información del vehiculo</h1>
+<table class="table">
+    <tr>
+    <th>Placa</th>
+    <th>Modelo</th>
+    <th>Marca</th>
+    <th>Linea</th>
+    <th>Color</th>
+  </tr>
+
+    <tr>
+    <td>@Model.vehiculo.Placa</td>
+    <td>@Model.vehiculo.Modelo</td>
+    <td>@Model.vehiculo.Marca</td>
+    <td>@Model.vehiculo.Linea</td>
+    <td>@Model.vehiculo.Color</td>
+    </tr>
+</table>
