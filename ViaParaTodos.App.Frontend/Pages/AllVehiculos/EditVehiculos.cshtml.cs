@@ -13,13 +13,12 @@ namespace ViaParaTodos.App.Frontend.Pages
     public class EditVehiculosModel : PageModel
     {
 
-        private readonly IRepositorioConductores repositorioConductores;
         private readonly IRepositorioVehiculos repositorioVehiculos;
 
         [BindProperty]
         public Vehiculos vehiculo {get;set;}
         
-        public EditVehiculosModel(IRepositorioVehiculos repositorioVehiculos, IRepositorioConductores repositorioConductores)
+        public EditVehiculosModel(IRepositorioVehiculos repositorioVehiculos)
         {
              
             this.repositorioVehiculos=repositorioVehiculos;

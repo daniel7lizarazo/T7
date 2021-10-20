@@ -1,0 +1,9 @@
+﻿@page
+@{
+}
+<form>
+    <label>Ingrese su numero de cedula</label>
+    <input name="cedulaciudadano" class="form-control">
+    <br>
+    <button asp-page="/Ciudadano/Detalle" asp-route-documentociudadano="cedulaciudadano" class="btn btn-success" ><i class="fas fa-plus-circle"></i>Buscar reportes</button>
+</form>

@@ -86,6 +86,7 @@ namespace ViaParaTodos.App.Frontend.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
+                    //return Redirect("/Agente/opciones");
                 }
                 if (result.RequiresTwoFactor)
                 {

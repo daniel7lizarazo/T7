@@ -2,9 +2,85 @@
 @model ViaParaTodos.App.Frontend.Pages.EliminarVehiculosModel
 @{
 }
-<h1>Eliminar Conductor</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Eliminar Vehiculo</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 
-<table class="table">
+   <script src="https://kit.fontawesome.com/b4ddf1f0cb.js" crossorigin="anonymous"></script> 
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js">
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+
+  </script>
+
+  <style>
+    .city {
+      background-color: tomato;
+      color: white;
+      border: 2px solid black;
+      margin: 20px;
+      padding: 50px;
+      width: 70%;
+      height: 100%;
+      position: relative;
+      display: block;
+    }
+
+    .responsive {
+      max-width: 100%;
+      position: relative;
+      display: block;
+      width: 50%;
+      height: auto;
+    }
+
+    .circle {
+      height: 300px;
+      width: 300px;
+      background-color: currentColor;
+      border-radius: 50%;
+    }
+
+    .boton-barras {
+      font-weight: bold;
+      border-radius: 50%;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      width: 70px;
+      height: 70px;
+      transition: all 0.5s;
+      cursor: pointer;
+
+    }
+
+    #grad1 {
+      height: auto;
+      background-color: red;
+      /* For browsers that do not support gradients */
+      background-image: linear-gradient(to left, black, #BD982D, #BDB42D, #FFC900, #FFEC00);
+    }
+  </style>
+</head>
+  <div class="container p-5 my-5 w3-red">
+<center> 
+<img src="https://agente15.camilocasas.repl.co/Icon/alert-vehiculo.png" width="100px">
+<h1 style="font-size:6vw;">Eliminar Vehículo</h1></center><br>
+<div class="table-responsive">
+<table class="table table-danger table-striped">
     <tr>
     <th>Placa</th>
     <th>Modelo</th>
@@ -21,9 +97,12 @@
     <td>@Model.vehiculo.Color</td>
     </tr>
 </table> 
-
-<h2>Accidentes en los que se ha visto involucrado</h2>
-<table class="table">
+</div>
+<center>
+<h2 style="color: white;">Accidentes en los que se ha visto involucrado</h2>
+</center>
+<div class="table-responsive">
+<table class="table table-danger table-striped">
     <tr>
     <th>Fecha</th>
     <th>Descripción</th>
@@ -42,16 +121,19 @@
     </tr>
 }
 </table>
-<h3>Si elimina la información de este conductor también lo eliminará de los reportes de estos accidentes. ¿Desea continuar con la eliminación?</h3>
+</div>
+<br>
+<center>
+<h3 style="color: white;">Si elimina la información de este conductor también lo eliminará de los reportes de estos accidentes. ¿Desea continuar con la eliminación?</h3>
 <br>
 <form method="post" asp-page-handler="Eliminar">
     <input type="hidden" name="idVehiculo" value="@Model.vehiculo.Id">
-    <label>Eliminar</label>
-    <input type="image" src="https://agente15.camilocasas.repl.co/Icon/Rev-User.png" alt="Submit" width="48" height="48">
+
+    <button class="btn btn-dark"><img src="https://agente15.camilocasas.repl.co/Icon/Car-Rev.png" width="28" height="28"></i> Eliminar</button>
 </form>
-    <td>
+    <br>
       <a class="btn btn-primary table-btn" asp-page="/AllVehiculos/ListVehiculos"> 
-      <i class="fas fa-info-circle"></i>
+      <i class="fas fa-ban"></i>
       Cancelar
       </a>
-    </td>
+</center>

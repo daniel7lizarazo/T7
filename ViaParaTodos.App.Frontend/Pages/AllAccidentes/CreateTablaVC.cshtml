@@ -2,19 +2,108 @@
 @model ViaParaTodos.App.Frontend.Pages.CreateTablaVCModel
 @{
 }
-<h1>Agrege los implicados</h1>
-<form method="post">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Crear Accidente</title>
+  <script src="https://kit.fontawesome.com/b4ddf1f0cb.js" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+
+  </script>
+
+  <style>
+
+    .city {
+          background-color: tomato;
+          color: white;
+          border: 2px solid black;
+          margin: 20px;
+          padding: 50px;
+          width: 70%;
+          height: 100%;
+          position: relative;
+          display: block;
+          }
+
+    .responsive {
+          max-width: 100%;
+          position: relative;
+          display: block;
+          width: 50%;
+          height: auto;
+        }
+    .circle {
+          height: 300px;
+          width: 300px;
+          background-color: currentColor;
+          border-radius: 50%;
+        }       
+
+    .boton-barras {
+          font-weight: bold;
+          border-radius: 50%;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 28px;
+          width: 70px;
+          height: 70px;
+          transition: all 0.5s;
+          cursor: pointer;
+        }
+
+    #grad1 {
+          height: auto;
+          background-color: red;
+          /* For browsers that do not support gradients */
+          background-image: linear-gradient(to left, black, #BD982D, #BDB42D, #FFC900, #FFEC00);
+        }
+  </style>
+
+</head>
+
+<div class="container p-5 my-5 bg-dark text-white" style="max-width:75%">
+
+<center>
+
+<img src="https://agente15.camilocasas.repl.co/Agente/Accidente.png" class="image" width="auto" height="130px">
+<img src="https://agente15.camilocasas.repl.co/Icon/implicados.png" class="image" width="auto" height="130px">
+
+<h1>Agrege los implicados</h1><br>
+
+<form method="post" class=was-validated>
+  <div class="row">
+  <div class="col">
     <label asp-for="numeroDoc">Numero de documento del conductor:</label><br>
-    <input asp-for="numeroDoc" class="form-control" > 
-  <br><br>
+    <input asp-for="numeroDoc" class="form-control" style="width: -webkit-fill-available" >
+    <br><br>
+    </div>
+  
+  <div class="col">
     <label asp-for="placa">Placa del vehiculo</label><br>
-    <input asp-for="placa" class="form-control" > 
-  <br><br>
-    <button type="submit" class="btn btn-primary">Agregar</button>
+    <input asp-for="placa" class="form-control" style="width: -webkit-fill-available" > </div>
+    </div>
+  <br>
+  
+    <button type="submit" class="btn btn-primary"><i class="fas fa-user-edit"></i>Agregar</button>
 </form>
-  <br><br>
-  <br><br>
-  <a class="btn btn-primary table-btn" asp-page="/AllAccidentes/UpdateAccidente" asp-route-idaccidente="@Model.accidenteId">
-  <i class="fas fa-info-circle"></i>
+<br>
+
+  <a class="btn btn-success" asp-page="/AllAccidentes/UpdateAccidente" asp-route-idaccidente="@Model.accidenteId">
+  <i class="far fa-save"></i>
   Finalizar
   </a>
+  </center>
+  </div>

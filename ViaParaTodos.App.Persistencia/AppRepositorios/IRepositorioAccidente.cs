@@ -16,6 +16,7 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
         IEnumerable<Localizacion> GetOtrasLocalizaciones(int localizacionId);
         IEnumerable<AgentesTransito> GetAllAgentesTransitoAccidente();
         IEnumerable<Localizacion> GetAllLocalizacioneAccidente();
+        int GetNumeroAccidentesLocalizacion(int localizacionId);
     }
     
 }

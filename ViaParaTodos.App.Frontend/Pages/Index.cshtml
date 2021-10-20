@@ -4,7 +4,93 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Via Para Todos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/b4ddf1f0cb.js" crossorigin="anonymous"></script>
+        
+    <style>
+        div {
+                text-align: center;
+            }
+
+        h3{
+            font: 'sans-serif';
+            border-color: 0;
+            text-align: center;
+            font-size: 40px;
+            margin: 50px 10px;
+            }
+    </style>
+</head>
+<body style="background-image:url('https://agente15.camilocasas.repl.co/Agente/ELE_Base.png');">
+
+    <div>
+        <h3>Por favor, escoge tu rol</h3>
+           <a href="/Agente/opciones">
+          <img src="https://t7.andreamoreno4.repl.co/Img/Icono_Agentes.png" class="zoom" width="30%"/></a>
+
+          <a href="/Ciudadano/Consulta">
+          <img src="https://t7.andreamoreno4.repl.co/Img/Icono_Ciudadanos.png" class="zoom" width="30%"/></a>
+    </div> 
+
+@if (User.Identity.IsAuthenticated)
+{
+    <table class="table table-sm">
+        @foreach (var claim in User.Claims)
+        {
+            <tr>
+                <td>@claim.Type</td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    </table>
+}
+</body>
+</html>
+
+<!--
+<head>
+    <meta charset="utf-8">
+    <title>Via Para Todos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/b4ddf1f0cb.js" crossorigin="anonymous"></script>
+        
+  
+</head>
+
+<body style="background-image:url('Img/ELE_FondoInicio_v3.png');background-size: 100%;">
+
+<a href="Loger.html" ELE_Logo_Inicio.png>
+        <img src="Img/ELE_FondoInicio_v3.png" width="100%"/>
+
+    <a class="btn btn-primary table-btn" asp-page="/Ciudadano/Consulta" style="background-color: darkmagenta;    border-color: darkmagenta;">
+    <i class="fas fa-info-circle"></i>
+    Ciudadanos
+    </a>
+
+    <a class="btn btn-primary table-btn" asp-page="/Agente/Estadisticas" style="background-color: darkmagenta;    border-color: darkmagenta;">
+    <i class="fas fa-info-circle"></i>
+    Estadisticas
+    </a>
+
+</body>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <table class="table table-sm">
+        @foreach (var claim in User.Claims)
+        {
+            <tr>
+                <td>@claim.Type</td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    </table>
+}-->

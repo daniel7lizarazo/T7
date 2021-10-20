@@ -2,13 +2,87 @@
 @model ViaParaTodos.App.Frontend.Pages.ListConductoresModel  
 @{
 }
-<h1>Lista de conductores</h1>
-  <a class="btn btn-primary table-btn" asp-page="/AllConductores/CreateConductores"> 
-  <i class="fas fa-info-circle"></i>
-  Crear
-  </a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lista Conductores</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 
-<table class="table">
+   <script src="https://kit.fontawesome.com/b4ddf1f0cb.js" crossorigin="anonymous"></script> 
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js">
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+
+  </script>
+
+  <style>
+    .city {
+      background-color: tomato;
+      color: white;
+      border: 2px solid black;
+      margin: 20px;
+      padding: 50px;
+      width: 70%;
+      height: 100%;
+      position: relative;
+      display: block;
+    }
+
+    .responsive {
+      max-width: 100%;
+      position: relative;
+      display: block;
+      width: 50%;
+      height: -webkit-fill-available;
+    }
+
+    .circle {
+      height: 300px;
+      width: 300px;
+      background-color: currentColor;
+      border-radius: 50%;
+    }
+
+    .boton-barras {
+      font-weight: bold;
+      border-radius: 50%;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      width: 70px;
+      height: 70px;
+      transition: all 0.5s;
+      cursor: pointer;
+
+    }
+
+    #grad1 {
+      height: -webkit-fill-available;
+      background-color: red;
+      /* For browsers that do not support gradients */
+      background-image: linear-gradient(to left, black, #BD982D, #BDB42D, #FFC900, #FFEC00);
+    }
+  </style>
+</head>
+<center>
+<h1 style="font-size:6vw">Lista de Conductores</h1>
+  <a class="btn btn-lg btn-success" asp-page="/AllConductores/CreateConductores"> 
+  <i class="fas fa-plus-circle"></i>
+  Crear
+  </a></center><br>
+<div class="table-responsive">
+<table class="table table-warning table-striped">
     <tr>
     <th>Nombre</th>
     <th>Apellido</th>
@@ -21,20 +95,20 @@
     <td>@conductor.Apellidos</td>
     <td>@conductor.NumeroDoc</td>
     <td>
-      <a class="btn btn-primary table-btn" asp-page="/AllConductores/DetailsConductores" asp-route-idconductor="@conductor.Id">
+      <a class="btn btn-primary table-btn" asp-page="/AllConductores/DetailsConductores" asp-route-idconductor="@conductor.Id" style="background-color: darkmagenta; border-color: darkmagenta;">
       <i class="fas fa-info-circle"></i>
       Detalles
       </a>
     </td>
     <td>
       <a class="btn btn-primary table-btn" asp-page="/AllConductores/EditConductores" asp-route-idconductor="@conductor.Id">
-      <i class="fas fa-info-circle"></i>
+      <i class="fas fa-sync-alt"></i>
       Editar
       </a>
     </td>
     <td>
-      <a class="btn btn-primary table-btn" asp-page="/AllConductores/EliminarConductores" asp-route-idconductor="@conductor.Id">
-      <i class="fas fa-info-circle"></i>
+      <a class="btn btn-danger" asp-page="/AllConductores/EliminarConductores" asp-route-idconductor="@conductor.Id">
+      <i class="fas fa-trash-alt"></i>
       Eliminar
       </a>
     </td>
@@ -42,3 +116,5 @@
     </tr>
 }
 </table>
+</div>
+<br><br><br><br>

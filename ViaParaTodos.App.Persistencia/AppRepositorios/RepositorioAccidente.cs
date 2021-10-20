@@ -22,6 +22,11 @@ namespace ViaParaTodos.App.Persistencia.AppRepositorios
             _appContext=appContext;
         }
 
+        int IRepositorioAccidente.GetNumeroAccidentesLocalizacion(int localizacionId)
+        {
+            return _appContext.Accidente.Where(a=>a.LocalizacionId==localizacionId).Count();
+        }
+
         IEnumerable<AgentesTransito> IRepositorioAccidente.GetAllAgentesTransitoAccidente()
         {
             return _appContext.AgentesTransito;

@@ -6,19 +6,12 @@
     <title>@ViewData["Title"] - Vias Para Todos</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
- <style>
-  #grad1 {
-  height: auto;
-  background-color: red; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to left, black ,#BD982D,#BDB42D,#FFC900, #FFEC00);
-  }
-  </style>
 
 </head>
 <body style="background-image:url('https://agente15.camilocasas.repl.co/Agente/ELE_Base.png');">
     <header>
-    <div id="grad1"><img src="https://agente15.camilocasas.repl.co/Agente/LogoLineasBlancas.png"  width="250px" height="auto"><br>
-    <img src="https://agente15.camilocasas.repl.co/Agente/menu2.png" style="width:100%;">
+    <div id="grad1"><img src="https://agente15.camilocasas.repl.co/Agente/ELE_Inicio%20v3.png"  style="width: 100%;"><br>
+    
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">   </a>
@@ -32,8 +25,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Agente/Agente-Acc">Agente</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Agente/opciones">Agente</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Ciudadano/Consulta">Ciudadano</a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/AllConductores/ListConductores">Conductores</a>
                         </li>
@@ -43,6 +40,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/AllAccidentes/ListAccidentes">Accidentes</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Nosotros/Nosotros">Nosotros</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -54,9 +56,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted" style="position: initial;">
         <div class="container">
-            &copy; 2021 - ViaParaTodos elaborado por el  - <a asp-area="" asp-page="/Privacy"><img src="https://agente15.camilocasas.repl.co/Agente/logoT7.png"  width="50px" height="auto"></a>
+            &copy; 2021 - ViaParaTodos elaborado por el  - <a asp-area="" asp-page="/Nosotros/Nosotros"><img src="https://agente15.camilocasas.repl.co/Agente/logoT7.png"  width="50px" height="auto"></a>
         </div>
     </footer>
 

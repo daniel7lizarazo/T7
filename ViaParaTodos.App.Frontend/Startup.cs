@@ -33,6 +33,7 @@ namespace ViaParaTodos.App.Frontend
             services.AddScoped<IRepositorioVehiculos, RepositorioVehiculos>();
             services.AddScoped<IRepositorioAccidente, RepositorioAccidente>();
             services.AddScoped<IRepositorioTablaVC, RepositorioTablaVC>();
+            services.AddScoped<IRepositorioLocalizacion, RepositorioLocalizacion>();
             services.AddControllersWithViews();
         }
 

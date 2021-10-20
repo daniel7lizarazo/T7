@@ -1,0 +1,52 @@
+﻿@page
+@model ViaParaTodos.App.Frontend.Pages.opcionesModel
+@{
+}
+<head>
+    <meta charset="utf-8">
+    <title>Via Para Todos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/b4ddf1f0cb.js" crossorigin="anonymous"></script>
+    <style>
+    * {
+    box-sizing: border-box;
+    }
+
+    .zoom {
+
+    transition: transform .2s;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    }
+
+    .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+    }
+    </style>
+    
+
+</head>
+
+<center>
+<h1>Escoge la operación que deseas realizar</h1>
+<br>     
+    <div>
+          <a href="/AllAccidentes/ListAccidentes">
+          <img src="https://t7.andreamoreno4.repl.co/Img/Btn_Accidente_btn.png" class="zoom" width="20%"/></a>
+
+          <a href="/AllConductores/ListConductores">
+          <img src="https://t7.andreamoreno4.repl.co/Img/Btn_Conductor_btn.png" class="zoom" width="20%"/></a>
+          <br><br>
+          <a href="/AllVehiculos/ListVehiculos">
+          <img src="https://t7.andreamoreno4.repl.co/Img/Btn_Vehiculo_btn.png" class="zoom" width="20%"/></a>
+
+          <a href="/Agente/Estadisticas">
+          <img src="https://t7.andreamoreno4.repl.co/Img/Btn_Reporte_btn.png" class="zoom" width="20%"/></a>
+
+    </div> 
+</center>

@@ -183,3 +183,8 @@ C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razo
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllVehiculos\CreateVehiculos.cshtml.g.cs
 C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\AllVehiculos\EliminarVehiculos.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\Ciudadano\Consulta.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\Ciudadano\Detalle.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\Agente\Estadisticas.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\Agente\opciones.cshtml.g.cs
+C:\ViaParaTodos\ViaParaTodos.App\ViaParaTodos.App.Frontend\obj\Debug\net5.0\Razor\Pages\Nosotros\Nosotros.cshtml.g.cs
